@@ -1,0 +1,782 @@
+[
+  {
+    "firstName": "Rafsan",
+    "lastName": "Ahmed",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/05\/Staff_RafsanAhmad_Adjust_flat.jpg",
+    "avatar": "Staff_RafsanAhmad_Adjust_flat.png"
+  },
+  {
+    "firstName": "Jitto",
+    "lastName": "Alexander",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/02\/Staff_JittoAlexander.jpg",
+    "avatar": "Staff_JittoAlexander.png"
+  },
+  {
+    "firstName": "Werner",
+    "lastName": "Anders",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0000_Leadership_Werner_Anders3_Adjust.jpg",
+    "avatar": "Leadership__0000_Leadership_Werner_Anders3_Adjust.png"
+  },
+  {
+    "firstName": "Christopher",
+    "lastName": "Arsenault",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/08\/Staff_Christopher_Arsenault_Adjusted.jpg",
+    "avatar": "Staff_Christopher_Arsenault_Adjusted.png"
+  },
+  {
+    "firstName": "Akash",
+    "lastName": "Aslam",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/10\/Staff_AkashAslam_adjust.jpg",
+    "avatar": "Staff_AkashAslam_adjust.png"
+  },
+  {
+    "firstName": "Joju",
+    "lastName": "Augustine",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/02\/Staff_Joju_Augustine_Adjust.jpg",
+    "avatar": "Staff_Joju_Augustine_Adjust.png"
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Badke",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/08\/Staff_Sarah_Badke_Adjusted.jpg",
+    "avatar": "Staff_Sarah_Badke_Adjusted.png"
+  },
+  {
+    "firstName": "Demarey",
+    "lastName": "Baker",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/09\/Staff_DemareyBaker_adjust.jpg",
+    "avatar": "Staff_DemareyBaker_adjust.png"
+  },
+  {
+    "firstName": "Carla",
+    "lastName": "Bartolo",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Carla_Bartolo_Adjust.jpg",
+    "avatar": "Staff_Carla_Bartolo_Adjust.png"
+  },
+  {
+    "firstName": "Marcus",
+    "lastName": "Betts",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/08\/Staff_MarcusBetts.jpg",
+    "avatar": "Staff_MarcusBetts.png"
+  },
+  {
+    "firstName": "Shrey",
+    "lastName": "Bhatnagar",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/09\/Staff__ShreyBhatnagar_adjust.jpg",
+    "avatar": "Staff__ShreyBhatnagar_adjust.png"
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Born",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/10\/Staff_Sarah_Born_Adjusted.jpg",
+    "avatar": "Staff_Sarah_Born_Adjusted.png"
+  },
+  {
+    "firstName": "Jeffrey",
+    "lastName": "Bowles",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0006_Leadership_Jeff_Bowles_Adjust.jpg",
+    "avatar": "Leadership__0006_Leadership_Jeff_Bowles_Adjust.png"
+  },
+  {
+    "firstName": "Belinda",
+    "lastName": "Brady",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/12\/Staff_Belinda_Brady_flat.jpg",
+    "avatar": "Staff_Belinda_Brady_flat.png"
+  },
+  {
+    "firstName": "Francis",
+    "lastName": "Bromet",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/02\/Staff_Francis_Bromet_NEW.jpg",
+    "avatar": "Staff_Francis_Bromet_NEW.png"
+  },
+  {
+    "firstName": "Cam",
+    "lastName": "Campbell",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/04\/Staff_Cam_Campbell_NEW.jpg",
+    "avatar": "Staff_Cam_Campbell_NEW.png"
+  },
+  {
+    "firstName": "Leanne",
+    "lastName": "Carter",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Leanne_Carter_Adjust.jpg",
+    "avatar": "Staff_Leanne_Carter_Adjust.png"
+  },
+  {
+    "firstName": "Jennifer",
+    "lastName": "Charter",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/04\/Staff_Jennifer_Charter_NEW.jpg",
+    "avatar": "Staff_Jennifer_Charter_NEW.png"
+  },
+  {
+    "firstName": "Llewelyn",
+    "lastName": "Clements",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2015\/12\/Staff_LlewelynClements_adjust.jpg",
+    "avatar": "Staff_LlewelynClements_adjust.png"
+  },
+  {
+    "firstName": "Brayden",
+    "lastName": "Cowell",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/05\/Staff_BraydenCowell_adjust.jpg",
+    "avatar": "Staff_BraydenCowell_adjust.png"
+  },
+  {
+    "firstName": "Raul",
+    "lastName": "De Sousa",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0003_Leadership_Raul_DeSousa3_Adjust.jpg",
+    "avatar": "Leadership__0003_Leadership_Raul_DeSousa3_Adjust.png"
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Delany",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/10\/MarkDelaney_Adjust-sm.jpg",
+    "avatar": "MarkDelaney_Adjust-sm.png"
+  },
+  {
+    "firstName": "Alejandra",
+    "lastName": "Delgadillo",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/08\/Staff_Alejandra_Delgadillo_Adjusted.jpg",
+    "avatar": "Staff_Alejandra_Delgadillo_Adjusted.png"
+  },
+  {
+    "firstName": "Phaven",
+    "lastName": "Deo",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/08\/Staff_PhavenDeo.jpg",
+    "avatar": "Staff_PhavenDeo.png"
+  },
+  {
+    "firstName": "Simone",
+    "lastName": "DeSousa",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/10\/Staff_Simone_deSousa_adjust.jpg",
+    "avatar": "Staff_Simone_deSousa_adjust.png"
+  },
+  {
+    "firstName": "Colin",
+    "lastName": "Devereaux",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0009_Leadership_Colin_Devereaux_Adjust.jpg",
+    "avatar": "Leadership__0009_Leadership_Colin_Devereaux_Adjust.png"
+  },
+  {
+    "firstName": "Milena",
+    "lastName": "DiBiase",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/12\/Staff_Milena_DiBiase_flat.jpg",
+    "avatar": "Staff_Milena_DiBiase_flat.png"
+  },
+  {
+    "firstName": "Shaelyn",
+    "lastName": "Diemer",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/02\/Staff_ShaelynDiemer.jpg",
+    "avatar": "Staff_ShaelynDiemer.png"
+  },
+  {
+    "firstName": "Jane",
+    "lastName": "Donovan",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0007_Leadership_Jane_Donovan4_Adjust.jpg",
+    "avatar": "Leadership__0007_Leadership_Jane_Donovan4_Adjust.png"
+  },
+  {
+    "firstName": "Ines",
+    "lastName": "Ducic",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Ines_Ducic2_Adjust.jpg",
+    "avatar": "Staff_Ines_Ducic2_Adjust.png"
+  },
+  {
+    "firstName": "Tri",
+    "lastName": "Duong",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/04\/Staff_Tri_Duong_adjust.jpg",
+    "avatar": "Staff_Tri_Duong_adjust.png"
+  },
+  {
+    "firstName": "Yehia",
+    "lastName": "Elmongy",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/05\/Staff_YehiaElmongy_adjust.jpg",
+    "avatar": "Staff_YehiaElmongy_adjust.png"
+  },
+  {
+    "firstName": "Andrei",
+    "lastName": "Ermakov",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Andrei_Ermakov2_Adjust.jpg",
+    "avatar": "Staff_Andrei_Ermakov2_Adjust.png"
+  },
+  {
+    "firstName": "Manuel",
+    "lastName": "Faria",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Manuel_Faria1_Adjust.jpg",
+    "avatar": "Staff_Manuel_Faria1_Adjust.png"
+  },
+  {
+    "firstName": "Moira",
+    "lastName": "Feldman",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Moira_Feldman_Adjust.jpg",
+    "avatar": "Staff_Moira_Feldman_Adjust.png"
+  },
+  {
+    "firstName": "Nicole",
+    "lastName": "Ford",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/02\/Staff_NicoleFord_Adjust.jpg",
+    "avatar": "Staff_NicoleFord_Adjust.png"
+  },
+  {
+    "firstName": "Shawn",
+    "lastName": "Francis",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/05\/Staff_ShawnFrancis_adjust_flat.jpg",
+    "avatar": "Staff_ShawnFrancis_adjust_flat.png"
+  },
+  {
+    "firstName": "Luisa",
+    "lastName": "Franco",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/04\/Staff_Luisa_Franco_NEW.jpg",
+    "avatar": "Staff_Luisa_Franco_NEW.png"
+  },
+  {
+    "firstName": "Angela",
+    "lastName": "Fufeng",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/08\/Staff_Angela_Futeng_Adjusted.jpg",
+    "avatar": "Staff_Angela_Futeng_Adjusted.png"
+  },
+  {
+    "firstName": "Shwetha",
+    "lastName": "Gangadharswamy",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/05\/Staff_ShwethaGangadharswamy_Adjust.jpg",
+    "avatar": "Staff_ShwethaGangadharswamy_Adjust.png"
+  },
+  {
+    "firstName": "Vineel",
+    "lastName": "Garimella",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/09\/Staff__VineelGarimella_adjust.jpg",
+    "avatar": "Staff__VineelGarimella_adjust.png"
+  },
+  {
+    "firstName": "Ellery",
+    "lastName": "Geddes",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/06\/Staff_Ellery_Geddes_flat.jpg",
+    "avatar": "Staff_Ellery_Geddes_flat.png"
+  },
+  {
+    "firstName": "Pierce",
+    "lastName": "Glanville",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/10\/Staff_Pierce_Glanville.jpg",
+    "avatar": "Staff_Pierce_Glanville.png"
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Godfrey",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/09\/Staff__EmilyGodfrey_adjust.jpg",
+    "avatar": "Staff__EmilyGodfrey_adjust.png"
+  },
+  {
+    "firstName": "Jason",
+    "lastName": "Griffiths",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Jason_Griffiths2_Adjust.jpg",
+    "avatar": "Staff_Jason_Griffiths2_Adjust.png"
+  },
+  {
+    "firstName": "Sierra",
+    "lastName": "Harris",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/06\/Staff_Sierra_Harris_flat.jpg",
+    "avatar": "Staff_Sierra_Harris_flat.png"
+  },
+  {
+    "firstName": "Ashley",
+    "lastName": "Hendricks",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/04\/Staff_Ashley_Hendricks_NEW.jpg",
+    "avatar": "Staff_Ashley_Hendricks_NEW.png"
+  },
+  {
+    "firstName": "Brent",
+    "lastName": "Henry",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/04\/Staff_Brent_Henry_Adjust-1.jpg",
+    "avatar": "Staff_Brent_Henry_Adjust-1.png"
+  },
+  {
+    "firstName": "Oleh",
+    "lastName": "Hodovaniuk",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/08\/Staff_OlehHodovaniuk.jpg",
+    "avatar": "Staff_OlehHodovaniuk.png"
+  },
+  {
+    "firstName": "Dayna",
+    "lastName": "Horgan",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Dayna_Horgan_Adjusted.jpg",
+    "avatar": "Staff_Dayna_Horgan_Adjusted.png"
+  },
+  {
+    "firstName": "Liz",
+    "lastName": "Howell",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/08\/Staff_LizHowell_adjust-1.jpg",
+    "avatar": "Staff_LizHowell_adjust-1.png"
+  },
+  {
+    "firstName": "Richard",
+    "lastName": "Hutchison",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Richard_Hutchison_Adjust.jpg",
+    "avatar": "Staff_Richard_Hutchison_Adjust.png"
+  },
+  {
+    "firstName": "Ryan",
+    "lastName": "Immesberger",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/10\/Staff_Ryan_Immesberger.jpg",
+    "avatar": "Staff_Ryan_Immesberger.png"
+  },
+  {
+    "firstName": "Colin",
+    "lastName": "Ireland",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0008_Leadership_Colin_Ireland_Adjust.jpg",
+    "avatar": "Leadership__0008_Leadership_Colin_Ireland_Adjust.png"
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Irons",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/05\/Staff_Mark_Irons_adjust.jpg",
+    "avatar": "Staff_Mark_Irons_adjust.png"
+  },
+  {
+    "firstName": "Shajeah",
+    "lastName": "Janjua",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/10\/Staff_Shajeah_Janjua.jpg",
+    "avatar": "Staff_Shajeah_Janjua.png"
+  },
+  {
+    "firstName": "Jennifer",
+    "lastName": "Jilany",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Jennifer_Jilany2_Adjust.jpg",
+    "avatar": "Staff_Jennifer_Jilany2_Adjust.png"
+  },
+  {
+    "firstName": "Craig",
+    "lastName": "Jones",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/04\/Staff_Craig_Jones_NEW.jpg",
+    "avatar": "Staff_Craig_Jones_NEW.png"
+  },
+  {
+    "firstName": "Valentine",
+    "lastName": "Kanu",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/12\/Staff_Val_Kanu_flat.jpg",
+    "avatar": "Staff_Val_Kanu_flat.png"
+  },
+  {
+    "firstName": "Anabelle",
+    "lastName": "Katigbak",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/12\/Staff_Anabelle_Katigbak_Adjusted.jpg",
+    "avatar": "Staff_Anabelle_Katigbak_Adjusted.png"
+  },
+  {
+    "firstName": "Raveed",
+    "lastName": "Khanlari",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/06\/Staff_Raveed_Khanlari_flat.jpg",
+    "avatar": "Staff_Raveed_Khanlari_flat.png"
+  },
+  {
+    "firstName": "Lata",
+    "lastName": "Khanuja",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/07\/Staff_Lata_Khanuja_flat.jpg",
+    "avatar": "Staff_Lata_Khanuja_flat.png"
+  },
+  {
+    "firstName": "Brenda",
+    "lastName": "Knight",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Brenda_Knight2_Adjust.jpg",
+    "avatar": "Staff_Brenda_Knight2_Adjust.png"
+  },
+  {
+    "firstName": "Melissa",
+    "lastName": "Kochuk",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Melissa_Kochuk1_Adjust.jpg",
+    "avatar": "Staff_Melissa_Kochuk1_Adjust.png"
+  },
+  {
+    "firstName": "Blanche",
+    "lastName": "Kwan",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Blanche_Kwan2_Adjust.jpg",
+    "avatar": "Staff_Blanche_Kwan2_Adjust.png"
+  },
+  {
+    "firstName": "Manish",
+    "lastName": "Lakhotia",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Manish_Lakhotia1_Adjust.jpg",
+    "avatar": "Staff_Manish_Lakhotia1_Adjust.png"
+  },
+  {
+    "firstName": "Sara",
+    "lastName": "Lanthier",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/03\/Staff_Sara_Lanthier_Adjust.jpg",
+    "avatar": "Staff_Sara_Lanthier_Adjust.png"
+  },
+  {
+    "firstName": "Joel",
+    "lastName": "Levinson",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Joel_Levinson_Adjust.jpg",
+    "avatar": "Staff_Joel_Levinson_Adjust.png"
+  },
+  {
+    "firstName": "Matt",
+    "lastName": "Littlefair",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/04\/Staff_Matt_Littlefair_Adjust.jpg",
+    "avatar": "Staff_Matt_Littlefair_Adjust.png"
+  },
+  {
+    "firstName": "Ulysses",
+    "lastName": "Lomibao",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff-JPGsUlysses_Lomibao_adjust.jpg",
+    "avatar": "Staff-JPGsUlysses_Lomibao_adjust.png"
+  },
+  {
+    "firstName": "Desiree",
+    "lastName": "Lyttle",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Desiree_Lyttle_Adjust.jpg",
+    "avatar": "Staff_Desiree_Lyttle_Adjust.png"
+  },
+  {
+    "firstName": "Mufaddal",
+    "lastName": "Mansoor",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/10\/2355_Kenna_Staff_v2_0006s_0004_MufaddalMansoor_new_adjust.jpg",
+    "avatar": "2355_Kenna_Staff_v2_0006s_0004_MufaddalMansoor_new_adjust.png"
+  },
+  {
+    "firstName": "Amanda",
+    "lastName": "Marciano",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0011_Leadership_Amanda_Marciano2_Adjust.jpg",
+    "avatar": "Leadership__0011_Leadership_Amanda_Marciano2_Adjust.png"
+  },
+  {
+    "firstName": "Mila",
+    "lastName": "Maric",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/04\/Staff_Mila_Maric_adjust-1.jpg",
+    "avatar": "Staff_Mila_Maric_adjust-1.png"
+  },
+  {
+    "firstName": "Benazir",
+    "lastName": "Marquez",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Benazir_Marquez_Adjusted.jpg",
+    "avatar": "Staff_Benazir_Marquez_Adjusted.png"
+  },
+  {
+    "firstName": "Brittany",
+    "lastName": "Marsh",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Brittany_Marsh_Adjusted.jpg",
+    "avatar": "Staff_Brittany_Marsh_Adjusted.png"
+  },
+  {
+    "firstName": "Jeremie",
+    "lastName": "Mayer",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Jeremie_Mayer2_Adjust.jpg",
+    "avatar": "Staff_Jeremie_Mayer2_Adjust.png"
+  },
+  {
+    "firstName": "Andrew",
+    "lastName": "McCallum",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Andrew_McCallum2_Adjust.jpg",
+    "avatar": "Staff_Andrew_McCallum2_Adjust.png"
+  },
+  {
+    "firstName": "Craig",
+    "lastName": "McDiarmid",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Craig_McDiarmid_NEW.jpg",
+    "avatar": "Staff_Craig_McDiarmid_NEW.png"
+  },
+  {
+    "firstName": "Carlene",
+    "lastName": "McKay",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/12\/Staff_CarleneMcKay_flat.jpg",
+    "avatar": "Staff_CarleneMcKay_flat.png"
+  },
+  {
+    "firstName": "Laurie",
+    "lastName": "McKenzie",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/08\/Staff_LaurieMcKenzie_adjust-1.jpg",
+    "avatar": "Staff_LaurieMcKenzie_adjust-1.png"
+  },
+  {
+    "firstName": "Deby",
+    "lastName": "Medeiros",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/12\/Staff_DebiMedeiros_flat.jpg",
+    "avatar": "Staff_DebiMedeiros_flat.png"
+  },
+  {
+    "firstName": "Ava",
+    "lastName": "Min",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/10\/Staff_Ava_Min.jpg",
+    "avatar": "Staff_Ava_Min.png"
+  },
+  {
+    "firstName": "Kosta",
+    "lastName": "Mingoulin",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Kosta_Mingoulin3_adjust.jpg",
+    "avatar": "Staff_Kosta_Mingoulin3_adjust.png"
+  },
+  {
+    "firstName": "Nadia",
+    "lastName": "Mohammed",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2015\/12\/Staff_Nadia_Mohammed_flat.jpg",
+    "avatar": "Staff_Nadia_Mohammed_flat.png"
+  },
+  {
+    "firstName": "Ken",
+    "lastName": "Morgan",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0005_Leadership_Ken_Morgan_Adjust.jpg",
+    "avatar": "Leadership__0005_Leadership_Ken_Morgan_Adjust.png"
+  },
+  {
+    "firstName": "Brent",
+    "lastName": "Morris",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Brent_Morris_Adjusted.jpg",
+    "avatar": "Staff_Brent_Morris_Adjusted.png"
+  },
+  {
+    "firstName": "Melody",
+    "lastName": "Muir",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Melody_Muir2_Adjust.jpg",
+    "avatar": "Staff_Melody_Muir2_Adjust.png"
+  },
+  {
+    "firstName": "Sanket",
+    "lastName": "Nandavadekar",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/05\/Staff_SanketNandavadekar_Adjust.jpg",
+    "avatar": "Staff_SanketNandavadekar_Adjust.png"
+  },
+  {
+    "firstName": "Farzaneh",
+    "lastName": "Nezarati",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Farzaneh_Nezarati1_adjust.jpg",
+    "avatar": "Staff_Farzaneh_Nezarati1_adjust.png"
+  },
+  {
+    "firstName": "Matthew",
+    "lastName": "Nieboer",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/02\/Staff_MattNeiboer_flat.jpg",
+    "avatar": "Staff_MattNeiboer_flat.png"
+  },
+  {
+    "firstName": "Mikhail",
+    "lastName": "Ovsichtcher",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/06\/Staff_Mikhail_Ovsichtcher_adjust.jpg",
+    "avatar": "Staff_Mikhail_Ovsichtcher_adjust.png"
+  },
+  {
+    "firstName": "Kaitlin",
+    "lastName": "Packer",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/02\/Staff_Kaitlin_Packer_Adjust.jpg",
+    "avatar": "Staff_Kaitlin_Packer_Adjust.png"
+  },
+  {
+    "firstName": "Tom",
+    "lastName": "Palos",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff-JPGsTom_Palos1_Adjust.jpg",
+    "avatar": "Staff-JPGsTom_Palos1_Adjust.png"
+  },
+  {
+    "firstName": "Mahesh",
+    "lastName": "Pantangi",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Mahesh_Pantangi2_Adjust.jpg",
+    "avatar": "Staff_Mahesh_Pantangi2_Adjust.png"
+  },
+  {
+    "firstName": "Nicholas",
+    "lastName": "Paul",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Nicholas_Paul2_Adjust.jpg",
+    "avatar": "Staff_Nicholas_Paul2_Adjust.png"
+  },
+  {
+    "firstName": "Tiffany",
+    "lastName": "Perez",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/04\/Staff_Tiffany_Perez_adjust.jpg",
+    "avatar": "Staff_Tiffany_Perez_adjust.png"
+  },
+  {
+    "firstName": "Andrew",
+    "lastName": "Perucho",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Andrew_Perucho_NEW.jpg",
+    "avatar": "Staff_Andrew_Perucho_NEW.png"
+  },
+  {
+    "firstName": "Piyush",
+    "lastName": "Prabhakar",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/08\/Staff_Piyush_Prabhakar_Adjusted.jpg",
+    "avatar": "Staff_Piyush_Prabhakar_Adjusted.png"
+  },
+  {
+    "firstName": "Shak",
+    "lastName": "Rana",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/12\/Staff_ShakRana_flat.jpg",
+    "avatar": "Staff_ShakRana_flat.png"
+  },
+  {
+    "firstName": "Abhimanyu",
+    "lastName": "Rana",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/08\/Staff_Abhimanyu_Rana_Adjusted.jpg",
+    "avatar": "Staff_Abhimanyu_Rana_Adjusted.png"
+  },
+  {
+    "firstName": "Chloe",
+    "lastName": "Receno",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/10\/Staff_Chloe_Receno.jpg",
+    "avatar": "Staff_Chloe_Receno.png"
+  },
+  {
+    "firstName": "Aimee",
+    "lastName": "Richard",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0012_Leadership_Aimee_Richard_Adjust.jpg",
+    "avatar": "Leadership__0012_Leadership_Aimee_Richard_Adjust.png"
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Rizvi",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Sarah_Rizvi2_Adjust.jpg",
+    "avatar": "Staff_Sarah_Rizvi2_Adjust.png"
+  },
+  {
+    "firstName": "Emma",
+    "lastName": "Robinson",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/10\/Staff_Emma_Robinson.jpg",
+    "avatar": "Staff_Emma_Robinson.png"
+  },
+  {
+    "firstName": "Gurneet",
+    "lastName": "Saggu",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/08\/Staff_GurneetSaggu.jpg",
+    "avatar": "Staff_GurneetSaggu.png"
+  },
+  {
+    "firstName": "Apurv",
+    "lastName": "Samant",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/06\/Staff_Apurb_Samant_flat.jpg",
+    "avatar": "Staff_Apurb_Samant_flat.png"
+  },
+  {
+    "firstName": "Michael",
+    "lastName": "Sansone",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Michael_Sansone_Adjust.jpg",
+    "avatar": "Staff_Michael_Sansone_Adjust.png"
+  },
+  {
+    "firstName": "Aurora",
+    "lastName": "Schellhorn",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/09\/Staff_Aurora_Schellhorn_Adjusted.jpg",
+    "avatar": "Staff_Aurora_Schellhorn_Adjusted.png"
+  },
+  {
+    "firstName": "Prince",
+    "lastName": "Sekhon",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/06\/Staff_Prince_Sekhon_flat.jpg",
+    "avatar": "Staff_Prince_Sekhon_flat.png"
+  },
+  {
+    "firstName": "Stephen",
+    "lastName": "Shaw",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0002_Leadership_Stephen_Shaw_Adjust.jpg",
+    "avatar": "Leadership__0002_Leadership_Stephen_Shaw_Adjust.png"
+  },
+  {
+    "firstName": "Gemma",
+    "lastName": "Sibthorp",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/12\/Staff_GemmaSibthorp_flat.jpg",
+    "avatar": "Staff_GemmaSibthorp_flat.png"
+  },
+  {
+    "firstName": "Mellisa",
+    "lastName": "Sinclair",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Mellisa_Sinclair2_Adjust.jpg",
+    "avatar": "Staff_Mellisa_Sinclair2_Adjust.png"
+  },
+  {
+    "firstName": "Sumit",
+    "lastName": "Singh",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/08\/Staff_Sumit_Singh_Adjusted.jpg",
+    "avatar": "Staff_Sumit_Singh_Adjusted.png"
+  },
+  {
+    "firstName": "Susan",
+    "lastName": "Sterling",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff-JPGsSusan_Sterling_Adjust.jpg",
+    "avatar": "Staff-JPGsSusan_Sterling_Adjust.png"
+  },
+  {
+    "firstName": "John",
+    "lastName": "Stevenson",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_John_Stevenson1_Adjust.jpg",
+    "avatar": "Staff_John_Stevenson1_Adjust.png"
+  },
+  {
+    "firstName": "Darin",
+    "lastName": "Switzer",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/04\/Staff_Darin_Switzer_adjusted.jpg",
+    "avatar": "Staff_Darin_Switzer_adjusted.png"
+  },
+  {
+    "firstName": "Daniel",
+    "lastName": "Tey",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Daniel_Tey_Adjust.jpg",
+    "avatar": "Staff_Daniel_Tey_Adjust.png"
+  },
+  {
+    "firstName": "Tim",
+    "lastName": "Thompson",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/01\/Staff_TimThompson_Adjust.jpg",
+    "avatar": "Staff_TimThompson_Adjust.png"
+  },
+  {
+    "firstName": "Ilan",
+    "lastName": "Timsit",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Ilan_Timsit_Adjust.jpg",
+    "avatar": "Staff_Ilan_Timsit_Adjust.png"
+  },
+  {
+    "firstName": "Anna",
+    "lastName": "Tokarchuk",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0010_Leadership_Anna_Tokarchuk2_Adjust.jpg",
+    "avatar": "Leadership__0010_Leadership_Anna_Tokarchuk2_Adjust.png"
+  },
+  {
+    "firstName": "Runa",
+    "lastName": "Tulsinarine",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2018\/05\/Staff_RuneTulsinarine_Adjust.jpg",
+    "avatar": "Staff_RuneTulsinarine_Adjust.png"
+  },
+  {
+    "firstName": "Steve",
+    "lastName": "Turner",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Leadership__0001_Leadership_Steve_Turner_Adjust.jpg",
+    "avatar": "Leadership__0001_Leadership_Steve_Turner_Adjust.png"
+  },
+  {
+    "firstName": "Anusha",
+    "lastName": "Vairamani",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Anusha_Vairamani_Adjust.jpg",
+    "avatar": "Staff_Anusha_Vairamani_Adjust.png"
+  },
+  {
+    "firstName": "Monica",
+    "lastName": "Van",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/09\/Staff__MonicaVanEngelen_adjust.jpg",
+    "avatar": "Staff__MonicaVanEngelen_adjust.png"
+  },
+  {
+    "firstName": "Jon",
+    "lastName": "Warren",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/06\/Staff_Jon_Warren_flat.jpg",
+    "avatar": "Staff_Jon_Warren_flat.png"
+  },
+  {
+    "firstName": "Kishan",
+    "lastName": "Wijeratne",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Kishan_Wijeratne_Adjust.jpg",
+    "avatar": "Staff_Kishan_Wijeratne_Adjust.png"
+  },
+  {
+    "firstName": "Brittney",
+    "lastName": "Wright",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2016\/09\/Staff_Brittney_Wright3_Adjust.jpg",
+    "avatar": "Staff_Brittney_Wright3_Adjust.png"
+  },
+  {
+    "firstName": "Mark",
+    "lastName": "Zaki",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2017\/08\/Staff_MarkZaki_adjust-1.jpg",
+    "avatar": "Staff_MarkZaki_adjust-1.png"
+  },
+  {
+    "firstName": "Laura",
+    "lastName": "Zschach",
+    "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/09\/Staff__LauraZschach_adjust.jpg",
+    "avatar": "Staff__LauraZschach_adjust.png"
+  }
+]
