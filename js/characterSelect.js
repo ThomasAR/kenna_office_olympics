@@ -21,9 +21,19 @@ $(document).ready(function () {
     });
 
     $("#playButton").click(function (e) {
-        let nickname = $("#nickname").val().replace(' ', '%');
         let name = selectedCharacter.firstName + '%' + selectedCharacter.lastName;
-        console.log("&nickname=" + nickname + "&name=" + name);
+        let nickname = $("#nickname").val().replace(' ', '%');
+        nickname = nickname ? nickname : name;
+
+        let avatar = selectedCharacter.avatar;
+        window.location.replace("game.html?&nickname="
+            + nickname
+            + "&character="
+            + name
+            + "&avatar="
+            + avatar
+        );
+
     })
 
 
