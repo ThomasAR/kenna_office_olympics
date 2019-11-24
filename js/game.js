@@ -25,8 +25,28 @@ var MIN_HEIGHT = 0;
 var MAX_HEIGHT = 1000;
 var currentHeight = 0;
 
+var avatar;
+var character;
+var nickname;
+var headImage;
+
 var testVelocity = 25;
 function preload() {
+    getQueryStringParams();
+
+    if(avatar) {
+        headImage = loadImage('../resources/staff/'+avatar);
+    }
+    else {
+        headImage = loadImage('../resources/staff/Staff_Michael_Sansone_Adjust.png');
+    }
+
+
+
+
+
+
+    pencilImage = loadImage('../resources/pencil.png');
     runAnimation.push(loadImage('../resources/animations/run/run-01.png'));
     runAnimation.push(loadImage('../resources/animations/run/run-02.png'));
     runAnimation.push(loadImage('../resources/animations/run/run-03.png'));
@@ -223,9 +243,9 @@ function getQueryStringParams() {
     let characterIndex = query.indexOf(characterSearch);
     let avatarIndex = query.indexOf(avatarSearch);
 
-    let nickname = query.substring(nicknameIndex + nicknameSearch.length, characterIndex).replace("%", " ");
-    let character = query.substring(characterIndex + characterSearch.length, avatarIndex).replace("%", " ");
-    let avatar = query.substring(avatarIndex + avatarSearch.length, query.length)
+    nickname = query.substring(nicknameIndex + nicknameSearch.length, characterIndex).replace("%", " ");
+    character = query.substring(characterIndex + characterSearch.length, avatarIndex).replace("%", " ");
+    avatar = query.substring(avatarIndex + avatarSearch.length, query.length)
 
     console.log(nickname);
     console.log(character);
@@ -236,18 +256,19 @@ function getQueryStringParams() {
 
 function drawPlayer(x) {
     image(runAnimation[Math.floor(currentFrame)], x, 400, 200, 200);
-
+    image(headImage, x+45, 420, 75,75);
 }
 
 function drawPencil(isInPlayersHand, playerX) {
-    rectMode(CENTER);
     if (isInPlayersHand) {
         translate(playerX + 18, 450);
         rotate(45);
         fill(0);
-        rect(0, 0, 10, 100);
-
+        imageMode(CENTER);
+        image(pencilImage, 0, 0, 10, 100);
+        imageMode(CORNER);
     }
+
 }
 
 function drawSky(currentHeight, minHeight, maxHeight) {
