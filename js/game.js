@@ -81,16 +81,17 @@ function PowerBar() {
 }
 
 function PowerSlider() {
-    let barStart = width / 2 - 300;
-    let barEnd = width / 2 + 300;
+
+    //go back and forth within the bounds of the slider
     if (sliderPower >= 600) sliderSpeed = -20;
     if (sliderPower <= 0) sliderSpeed = 20;
+
+    //stop slider
     if (spaceUp) {
         console.log(sliderPower);
         sliderSpeed = 0;
     }
     sliderPower += sliderSpeed;
-    // translate(this.x += 2, 100)
     translate(0, 0);
     rect(300 + sliderPower, 100, 10, 10)
 
@@ -99,12 +100,12 @@ function PowerSlider() {
 
 function Ball() {
     let angle = angleThrow;
-    console.log(angleThrow);
     let power = 100;
     this.x = 80;
     this.y = 1000;
     this.r = 30;
 
+    //x and y velocities based on angle and power
     this.xSpeed = power * sin(angle) * 0.4;
     this.ySpeed = power * cos(angle) * -1 * 0.4;
 
@@ -112,7 +113,10 @@ function Ball() {
 
     this.show = function () {
 
+        //move based on calculated trajectory
         translate(this.x, this.y);
+
+        //rotate based on tangent line of current point on the curve
         rotate(-1 * atan((landedX ? landedX : this.xSpeed) / (landedY ? landedY : this.ySpeed)));
 
         rect(0, 0, 20, 100);
@@ -122,8 +126,10 @@ function Ball() {
         this.y += this.ySpeed;
         this.x += this.xSpeed;
 
-        if (this.y >= height - 10) {
+        if (this.y >= height - 10) { //if landed
             this.y = height - 10;
+
+            //set landed coordinates to keep pencil at
             landedX = landedX ? landedX : this.xSpeed;
             landedY = landedY ? landedY : this.ySpeed;
             this.xSpeed = 0;
