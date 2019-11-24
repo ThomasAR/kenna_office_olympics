@@ -15,7 +15,10 @@ var currentFrame = 0;
 var runAnimation = [];
 var throwAnimation = [];
 var playerX = 200;
+var PLAYER_VELOCITY = 4;
 
+var PLAYER_STATE;
+var throwFrame = 0;
 const Y_AXIS = 1;
 const X_AXIS = 2;
 
@@ -31,6 +34,11 @@ var nickname;
 var headImage;
 
 var testVelocity = 25;
+
+var cam;
+
+var releasePower = 0;
+
 function preload() {
     getQueryStringParams();
 
@@ -72,8 +80,11 @@ function setup() {
     angleMode(DEGREES);
     rectMode(CENTER);
 
+    PLAYER_STATE = 0;
     // console.log(query.substring())
     // createCanvas(1920, 1080)
+
+    cam = new Camera();
 }
 
 function draw() {
@@ -116,8 +127,23 @@ function draw() {
         currentFrame = 0;
     }
 
-    //MOVE PLAYER 2 PX PER FRAME
-    playerX += 2;
+    
+    //MOVE PLAYER
+    switch(PLAYER_STATE) {
+        case 0: //RUNNING
+            playerX += PLAYER_VELOCITY;
+            break;
+        case 1: //THROWING
+            PLAYER_VELOCITY -= 0.5;
+            if(PLAYER_VELOCITY < 0) {
+                PLAYER_VELOCITY = 0;
+            }
+            playerX += PLAYER_VELOCITY;
+            break;
+        case 2: //STATIONARY
+            //DO NOTHING
+            break;
+    }
 
 
 }
@@ -145,6 +171,7 @@ function keyReleased() {
         landedY = 0;
         pencil = new Pencil();
         spaceUp = true;
+        PLAYER_STATE = 1;
     }
 
 }
@@ -153,8 +180,20 @@ function keyReleased() {
 function PowerBar() {
     let barStart = width / 2 - 300;
     let barEnd = width / 2 + 300;
-    rect(600, 80, 600, 20);
-
+    
+    setGradient(600,80,150,40,color(255,0,0),color(255,188,0), X_AXIS);
+    setGradient(750,80,150,40,color(255,188,0),color(46,199,0), X_AXIS);
+    setGradient(900,80,150,40,color(46,199,0),color(255,188,0), X_AXIS);
+    setGradient(1050,80,150,40,color(255,188,0),color(255,0,0), X_AXIS);
+    stroke(0);
+    strokeWeight(3);
+    noFill();
+    rect(600, 80, 200, 40);
+    rect(800, 80, 200, 40);
+    rect(1000, 80, 200, 40);
+    rect(600, 80, 200, 40);
+    rect(800, 80, 200, 40);
+    rect(1000, 80, 200, 40);
 }
 
 function PowerSlider() {
@@ -170,25 +209,34 @@ function PowerSlider() {
     }
     sliderPower += sliderSpeed;
     translate(0, 0);
-    rect(300 + sliderPower, 100, 10, 10)
+    fill(0);
+    triangle(600 + sliderPower, 130, 620 + sliderPower, 165, 580+sliderPower, 165);
 
+    if(sliderPower >= 300) {
+        releasePower = 600 - sliderPower;
+    }
+    else{
+        releasePower = sliderPower;
+    }
+    
 
 }
 
 function throwAngle() {
-    rectMode(CENTER);
+    imageMode(CENTER);
     if (angleThrow === 90) angleSpeed = -2;
     if (angleThrow === 0) angleSpeed = 2;
     angleThrow += spaceDown ? 0 : angleSpeed; //stop angle movement when space is held down
     translate(playerX + 18, 730) //follow player
     rotate(angleThrow);
     fill(0);
-    rect(0, 0, 20, 100);
+    image(pencilImage, 0, 0, 10, 100);
+    imageMode(CORNER);
 }
 
 function Pencil() {
     let angle = angleThrow;
-    let power = 100;
+    let power = releasePower;
     this.x = playerX;
     this.y = 680;
     this.r = 30;
@@ -205,9 +253,12 @@ function Pencil() {
         translate(this.x, this.y);
 
         //rotate based on tangent line of current point on the curve
-        rotate(-1 * atan((landedX ? landedX : this.xSpeed) / (landedY ? landedY : this.ySpeed)));
+        var rotation = -1 * atan((landedX ? landedX : this.xSpeed) / (landedY ? landedY : this.ySpeed));
 
+        rotate(rotation < 0 ? 90 + (90 - Math.abs(rotation)) : rotation);
+        imageMode(CENTER);
         image(pencilImage, 0, 0, 10, 100);
+        imageMode(CORNER);
 
 
         this.ySpeed += this.gravity;
@@ -221,7 +272,7 @@ function Pencil() {
             landedX = landedX ? landedX : this.xSpeed;
             landedY = landedY ? landedY : this.ySpeed;
             this.xSpeed = 0;
-            console.log(landedX);
+            console.log(this.x);
             noLoop();
         }
         else {
@@ -233,8 +284,25 @@ function Pencil() {
 }
 
 function drawPlayer(x) {
-    image(runAnimation[Math.floor(currentFrame)], x, 680, 200, 200);
-    image(headImage, x+45, 420, 75,75);
+    
+    //DRAW BODY
+    switch (PLAYER_STATE) {
+        case 0:
+            image(runAnimation[Math.floor(currentFrame)], x, 680, 200, 200);
+            break;
+        case 1:
+            image(throwAnimation[Math.floor(throwFrame)], x, 680, 200, 200);
+            throwFrame+=1;
+            if(throwFrame >= 3) {
+                PLAYER_STATE = 2;
+            }
+            break;
+        case 2:
+            image(throwAnimation[3], x, 680, 200, 200);
+            break;
+    }
+    //DRAW HEAD
+    image(headImage, x+45, 695+2*sin(map(currentFrame, 0, 8, 0, 360)), 75,75);
 }
 
 function drawSky(currentHeight, minHeight, maxHeight) {
