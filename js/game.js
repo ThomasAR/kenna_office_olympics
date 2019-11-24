@@ -1,4 +1,4 @@
-var ball;
+var pencil;
 var rotateX = 0;
 var rotateY = 0;
 var landedX = 0;
@@ -67,7 +67,7 @@ function setup() {
     MAX_COLOR = color(0, 0, 102);
     MIN_COLOR = color(204, 255, 255);
 
-    createCanvas(1000, 700);
+    createCanvas(1920, 1080);
 
     angleMode(DEGREES);
     rectMode(CENTER);
@@ -79,15 +79,7 @@ function setup() {
 function draw() {
     // background(0);
 
-    // if (spaceDown || spaceUp) {
-    //     showPowerBar();
-    // }
 
-    // if (spaceUp) {
-    //     ball.show();
-    // } else {
-    //     throwAngle();
-    // }
 
     background(255);
 
@@ -104,8 +96,19 @@ function draw() {
 
 
     drawPlayer(playerX);
+
+    if (spaceDown || spaceUp) {
+        showPowerBar();
+    }
+
+    if (spaceUp) {
+        pencil.show();
+    } else {
+        throwAngle();
+    }
+
     //FIRST PARAM: isInPlayersHand, PENCIL MECHANICS CHANGE WHEN NOT IN PLAYERS HAND OBVIOUSLY, I.E. ON RELEASE OF SPACE BAR THIS WOULD BECOME FALSE.
-    drawPencil(true, playerX);
+    // drawPencil(true, playerX);
 
     //FRAME COUNTER FOR RUNNING ANIMATION
     currentFrame += 0.3;
@@ -117,15 +120,6 @@ function draw() {
     playerX += 2;
 
 
-}
-
-function throwAngle() {
-    if (angleThrow === 90) angleSpeed = -2;
-    if (angleThrow === 0) angleSpeed = 2;
-    angleThrow += spaceDown ? 0 : angleSpeed; //stop angle movement when space is held down
-    translate(80, 1000)
-    rotate(angleThrow);
-    rect(0, 0, 20, 100);
 }
 
 function showPowerBar() {
@@ -149,11 +143,13 @@ function keyReleased() {
         spaceDown = false;
         landedX = 0;
         landedY = 0;
-        ball = new Ball();
+        pencil = new Pencil();
         spaceUp = true;
     }
 
 }
+
+
 function PowerBar() {
     let barStart = width / 2 - 300;
     let barEnd = width / 2 + 300;
@@ -179,11 +175,22 @@ function PowerSlider() {
 
 }
 
-function Ball() {
+function throwAngle() {
+    rectMode(CENTER);
+    if (angleThrow === 90) angleSpeed = -2;
+    if (angleThrow === 0) angleSpeed = 2;
+    angleThrow += spaceDown ? 0 : angleSpeed; //stop angle movement when space is held down
+    translate(playerX + 18, 730) //follow player
+    rotate(angleThrow);
+    fill(0);
+    rect(0, 0, 20, 100);
+}
+
+function Pencil() {
     let angle = angleThrow;
     let power = 100;
-    this.x = 80;
-    this.y = 1000;
+    this.x = playerX;
+    this.y = 680;
     this.r = 30;
 
     //x and y velocities based on angle and power
@@ -200,7 +207,7 @@ function Ball() {
         //rotate based on tangent line of current point on the curve
         rotate(-1 * atan((landedX ? landedX : this.xSpeed) / (landedY ? landedY : this.ySpeed)));
 
-        rect(0, 0, 20, 100);
+        image(pencilImage, 0, 0, 10, 100);
 
 
         this.ySpeed += this.gravity;
@@ -225,50 +232,9 @@ function Ball() {
     }
 }
 
-
-
-
-
-
-
-
-function getQueryStringParams() {
-    let query = window.location.search;
-
-    let nicknameSearch = "&nickname=";
-    let characterSearch = "&character=";
-    let avatarSearch = "&avatar=";
-
-    let nicknameIndex = query.indexOf(nicknameSearch);
-    let characterIndex = query.indexOf(characterSearch);
-    let avatarIndex = query.indexOf(avatarSearch);
-
-    nickname = query.substring(nicknameIndex + nicknameSearch.length, characterIndex).replace("%", " ");
-    character = query.substring(characterIndex + characterSearch.length, avatarIndex).replace("%", " ");
-    avatar = query.substring(avatarIndex + avatarSearch.length, query.length)
-
-    console.log(nickname);
-    console.log(character);
-    console.log(avatar);
-}
-
-
-
 function drawPlayer(x) {
-    image(runAnimation[Math.floor(currentFrame)], x, 400, 200, 200);
+    image(runAnimation[Math.floor(currentFrame)], x, 680, 200, 200);
     image(headImage, x+45, 420, 75,75);
-}
-
-function drawPencil(isInPlayersHand, playerX) {
-    if (isInPlayersHand) {
-        translate(playerX + 18, 450);
-        rotate(45);
-        fill(0);
-        imageMode(CENTER);
-        image(pencilImage, 0, 0, 10, 100);
-        imageMode(CORNER);
-    }
-
 }
 
 function drawSky(currentHeight, minHeight, maxHeight) {
@@ -305,5 +271,31 @@ function setGradient(x, y, w, h, c1, c2, axis) {
 function drawGround() {
     fill(color(0, 153, 0));
     rectMode(CORNER);
-    rect(0, 600, width, height - 600);
+    rect(0, 880, width, height - 880);
+}
+
+
+
+
+
+
+
+function getQueryStringParams() {
+    let query = window.location.search;
+
+    let nicknameSearch = "&nickname=";
+    let characterSearch = "&character=";
+    let avatarSearch = "&avatar=";
+
+    let nicknameIndex = query.indexOf(nicknameSearch);
+    let characterIndex = query.indexOf(characterSearch);
+    let avatarIndex = query.indexOf(avatarSearch);
+
+    nickname = query.substring(nicknameIndex + nicknameSearch.length, characterIndex).replace("%", " ");
+    character = query.substring(characterIndex + characterSearch.length, avatarIndex).replace("%", " ");
+    avatar = query.substring(avatarIndex + avatarSearch.length, query.length)
+
+    console.log(nickname);
+    console.log(character);
+    console.log(avatar);
 }
