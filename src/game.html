@@ -1,9 +1,22 @@
 <html>
   <head>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
     <script src="../resources/p5.min.js"></script>
     <script src="../libraries/p5.canvascam.js"></script>
     <script src="../js/game.js"></script>
     <link rel="stylesheet" type="text/css" href="./game.css">
   </head>
   <body>
-  </body
+    <div id="EndScreen">
+      <div id="medal">1<sup id="ordinal">st</sup></div>
+      <p>You threw the pencil:</p>
+      <div id="Score">2336.1 m</div>
+      <button id="TryAgain">Try Again</button>
+      <button id="TryAgain">Select Character</button> 
+      <p class="leader-title">Leaderboard</p>
+      <div id="Leaderboard"></div>
+    </div>
+  </body>
