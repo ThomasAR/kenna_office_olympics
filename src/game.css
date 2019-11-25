@@ -18,11 +18,11 @@ canvas{
     left: 73%;
     transform: translate(-50%, -50%);
     background-color: white;
-    width: 450px;
-    height: 561px;
+    width: 350px;
+    height: 400px;
     border-radius: 35px;
     box-shadow: 0 0 20px 0px #0000007a;
-    padding:40px;
+    padding:80px;
     display:none;
 }
 
