@@ -1,3 +1,16 @@
+//GAME SETTINGS
+var PLAYER_VELOCITY = 4;
+var GRAVITY = 0.5;
+var POWER_MULTIPLIER = 0.4;
+
+var MIN_HEIGHT = 0;
+var MAX_HEIGHT = 10000;
+//END GAME SETTINGS
+
+
+
+
+
 var pencil;
 var rotateX = 0;
 var rotateY = 0;
@@ -15,7 +28,9 @@ var currentFrame = 0;
 var runAnimation = [];
 var throwAnimation = [];
 var playerX = 200;
-var PLAYER_VELOCITY = 4;
+var MAX_COLOR;
+var MIN_COLOR;
+
 
 var PLAYER_STATE;
 var throwFrame = 0;
@@ -24,8 +39,7 @@ const X_AXIS = 2;
 
 var MAX_COLOR;
 var MIN_COLOR;
-var MIN_HEIGHT = 0;
-var MAX_HEIGHT = 1000;
+
 var currentHeight = 0;
 
 var avatar;
@@ -39,6 +53,12 @@ var cam;
 
 var releasePower = 0;
 
+
+var pencilDX = 0;
+var pencilDY = 0;
+
+var scoreFont;
+
 function preload() {
     getQueryStringParams();
 
@@ -50,7 +70,7 @@ function preload() {
     }
 
 
-
+    scoreFont = loadFont('../resources/Neucha-Regular.ttf');
 
 
 
@@ -76,7 +96,7 @@ function setup() {
     MIN_COLOR = color(204, 255, 255);
 
     createCanvas(1920, 1080);
-
+    cam = new Camera();
     angleMode(DEGREES);
     rectMode(CENTER);
 
@@ -84,29 +104,15 @@ function setup() {
     // console.log(query.substring())
     // createCanvas(1920, 1080)
 
-    cam = new Camera();
 }
 
 function draw() {
-    // background(0);
 
 
-
-    background(255);
-
-    //JUST TESTING WITH SKY GRADIENTS
-    currentHeight += testVelocity;
-    testVelocity -= 0.5;
-    drawSky(currentHeight, MIN_HEIGHT, MAX_HEIGHT);
-
-
+    drawSky();
+    push();
     drawGround();
-
-    //move the camera away from the plane by a sin wave
-    //camera(0, 0, 1000, 0, 0, 0, 0, 1, 0);
-
-
-    drawPlayer(playerX);
+    drawPlayer();
 
     if (spaceDown || spaceUp) {
         showPowerBar();
@@ -114,10 +120,13 @@ function draw() {
 
     if (spaceUp) {
         pencil.show();
+        pop();
+        drawScore();
     } else {
         throwAngle();
     }
 
+    
     //FIRST PARAM: isInPlayersHand, PENCIL MECHANICS CHANGE WHEN NOT IN PLAYERS HAND OBVIOUSLY, I.E. ON RELEASE OF SPACE BAR THIS WOULD BECOME FALSE.
     // drawPencil(true, playerX);
 
@@ -125,24 +134,6 @@ function draw() {
     currentFrame += 0.3;
     if (currentFrame >= 8) {
         currentFrame = 0;
-    }
-
-    
-    //MOVE PLAYER
-    switch(PLAYER_STATE) {
-        case 0: //RUNNING
-            playerX += PLAYER_VELOCITY;
-            break;
-        case 1: //THROWING
-            PLAYER_VELOCITY -= 0.5;
-            if(PLAYER_VELOCITY < 0) {
-                PLAYER_VELOCITY = 0;
-            }
-            playerX += PLAYER_VELOCITY;
-            break;
-        case 2: //STATIONARY
-            //DO NOTHING
-            break;
     }
 
 
@@ -178,27 +169,25 @@ function keyReleased() {
 
 
 function PowerBar() {
-    let barStart = width / 2 - 300;
-    let barEnd = width / 2 + 300;
-    
-    setGradient(600,80,150,40,color(255,0,0),color(255,188,0), X_AXIS);
-    setGradient(750,80,150,40,color(255,188,0),color(46,199,0), X_AXIS);
-    setGradient(900,80,150,40,color(46,199,0),color(255,188,0), X_AXIS);
-    setGradient(1050,80,150,40,color(255,188,0),color(255,0,0), X_AXIS);
+
+    strokeWeight(1);
+    setGradient(width / 2 - 300,80,150,40,color(255,0,0),color(255,188,0), X_AXIS);
+    setGradient(width / 2 - 150,80,150,40,color(255,188,0),color(46,199,0), X_AXIS);
+    setGradient(width / 2,80,150,40,color(46,199,0),color(255,188,0), X_AXIS);
+    setGradient(width / 2 + 150,80,150,40,color(255,188,0),color(255,0,0), X_AXIS);
     stroke(0);
     strokeWeight(3);
     noFill();
-    rect(600, 80, 200, 40);
-    rect(800, 80, 200, 40);
-    rect(1000, 80, 200, 40);
-    rect(600, 80, 200, 40);
-    rect(800, 80, 200, 40);
-    rect(1000, 80, 200, 40);
+    rect(width / 2 - 300, 80, 200, 40);
+    rect(width / 2 - 100, 80, 200, 40);
+    rect(width / 2 + 100, 80, 200, 40);
+
 }
 
 function PowerSlider() {
 
     //go back and forth within the bounds of the slider
+    
     if (sliderPower >= 600) sliderSpeed = -20;
     if (sliderPower <= 0) sliderSpeed = 20;
 
@@ -210,7 +199,7 @@ function PowerSlider() {
     sliderPower += sliderSpeed;
     translate(0, 0);
     fill(0);
-    triangle(600 + sliderPower, 130, 620 + sliderPower, 165, 580+sliderPower, 165);
+    triangle(width/2-300 + sliderPower, 130, width/2-300+20 + sliderPower, 165, width/2-300-20+sliderPower, 165);
 
     if(sliderPower >= 300) {
         releasePower = 600 - sliderPower;
@@ -228,6 +217,7 @@ function throwAngle() {
     if (angleThrow === 0) angleSpeed = 2;
     angleThrow += spaceDown ? 0 : angleSpeed; //stop angle movement when space is held down
     translate(playerX + 18, 730) //follow player
+    cam.translate(1000, 0);
     rotate(angleThrow);
     fill(0);
     image(pencilImage, 0, 0, 10, 100);
@@ -242,10 +232,10 @@ function Pencil() {
     this.r = 30;
 
     //x and y velocities based on angle and power
-    this.xSpeed = power * sin(angle) * 0.4;
-    this.ySpeed = power * cos(angle) * -1 * 0.4;
+    this.xSpeed = power * sin(angle) * POWER_MULTIPLIER;
+    this.ySpeed = power * cos(angle) * -1 * POWER_MULTIPLIER;
 
-    this.gravity = 1;
+    this.gravity = GRAVITY;
 
     this.show = function () {
 
@@ -262,17 +252,19 @@ function Pencil() {
 
 
         this.ySpeed += this.gravity;
-        this.y += this.ySpeed;
-        this.x += this.xSpeed;
-
-        if (this.y >= height - 10) { //if landed
-            this.y = height - 10;
-
+        //this.y += this.ySpeed;
+        //this.x += this.xSpeed;
+        pencilDY -= this.ySpeed;
+        pencilDX -= this.xSpeed;
+        if (pencilDY < -170) { //if landed
+            pencilDY = -170;
+            pop();
+            drawGround();
             //set landed coordinates to keep pencil at
             landedX = landedX ? landedX : this.xSpeed;
             landedY = landedY ? landedY : this.ySpeed;
             this.xSpeed = 0;
-            console.log(this.x);
+            console.log(-pencilDX);
             noLoop();
         }
         else {
@@ -283,31 +275,51 @@ function Pencil() {
     }
 }
 
-function drawPlayer(x) {
+function drawPlayer() {
     
     //DRAW BODY
     switch (PLAYER_STATE) {
         case 0:
-            image(runAnimation[Math.floor(currentFrame)], x, 680, 200, 200);
+            image(runAnimation[Math.floor(currentFrame)], playerX + pencilDX, 680 + pencilDY, 200, 200);
             break;
         case 1:
-            image(throwAnimation[Math.floor(throwFrame)], x, 680, 200, 200);
+            image(throwAnimation[Math.floor(throwFrame)], playerX + pencilDX, 680 + pencilDY, 200, 200);
             throwFrame+=1;
             if(throwFrame >= 3) {
                 PLAYER_STATE = 2;
             }
             break;
         case 2:
-            image(throwAnimation[3], x, 680, 200, 200);
+            image(throwAnimation[3], playerX + pencilDX, 680 + pencilDY, 200, 200);
             break;
     }
     //DRAW HEAD
-    image(headImage, x+45, 695+2*sin(map(currentFrame, 0, 8, 0, 360)), 75,75);
+    image(headImage, playerX +45 + pencilDX, 695+2*sin(map(currentFrame, 0, 8, 0, 360)) + pencilDY, 65,75);
+
+    //MOVE PLAYER
+    switch(PLAYER_STATE) {
+        case 0: //RUNNING
+            playerX += PLAYER_VELOCITY;
+            break;
+        case 1: //THROWING
+            PLAYER_VELOCITY -= 0.5;
+            if(PLAYER_VELOCITY < 0) {
+                PLAYER_VELOCITY = 0;
+            }
+            playerX += PLAYER_VELOCITY;
+            break;
+        case 2: //STATIONARY
+            //DO NOTHING
+            break;
+    }
 }
 
-function drawSky(currentHeight, minHeight, maxHeight) {
-    let interLight = map(currentHeight, minHeight, maxHeight, 0, 1);
-    let interDark = map(currentHeight + 0.1 * (maxHeight - minHeight), minHeight, maxHeight, 0, 1);
+function drawSky() {
+    //JUST TESTING WITH SKY GRADIENTS
+    
+
+    let interLight = map(pencilDY, MIN_HEIGHT, MAX_HEIGHT, 0, 1);
+    let interDark = map(pencilDY + 0.1 * (MAX_HEIGHT - MIN_HEIGHT), MIN_HEIGHT, MAX_HEIGHT, 0, 1);
     var light = lerpColor(MIN_COLOR, MAX_COLOR, interLight);
     var dark = lerpColor(MIN_COLOR, MAX_COLOR, interDark);
 
@@ -337,12 +349,24 @@ function setGradient(x, y, w, h, c1, c2, axis) {
 }
 
 function drawGround() {
-    fill(color(0, 153, 0));
+    noStroke();
+    fill(color(0, 128, 0));
     rectMode(CORNER);
-    rect(0, 880, width, height - 880);
+    rect(0, 880 + pencilDY, width, height);
 }
 
 
+function drawScore() {
+    
+    rectMode(CENTER);
+    textAlign(CENTER);
+    textSize(100);
+    fill(255);
+    stroke(0);
+    strokeWeight(5);
+    textFont(scoreFont);
+    text((-pencilDX/10).toFixed(1) + " m", width/2, 300)
+}
 
 
 
