@@ -18,17 +18,18 @@ canvas{
     left: 73%;
     transform: translate(-50%, -50%);
     background-color: white;
-    width: 350px;
+    width: 450px;
     height: 400px;
     border-radius: 35px;
     box-shadow: 0 0 20px 0px #0000007a;
-    padding:80px;
     display:none;
+    text-align:center;
 }
 
 #EndScreen p {
     text-align:center;
     font-size:24px;
+    margin-top: 65px;
 }
 
 #EndScreen div{
@@ -59,30 +60,32 @@ canvas{
 }
 
 button{
-    display:block;
-    margin:20px auto;
-    width:250px;
+    margin:10px;
+    width:170px;
     height:50px;
     border-radius:15px;
     border:0;
-
-
+    font-weight:bold;
+    font-size:18px;
+    background:green;
+    color:white;
+    margin:5px auto;
 }
 
 button:hover{
-    border:2px solid grey;
+    border:2px solid black;
     cursor:pointer;
 }
 
-.leader-title{
-    margin-bottom:10px;
+button#Submit {
+    display:block;
+    width:350px;
 }
 
-
-#Leaderboard{
+.spacer{
+    width:0px;
+    height:10px;
+    content:'';
+    display:inline-block;
     margin:0 auto;
-    width:90%;
-    height:150px;
-    border:1px solid grey;
-    overflow-y:scroll;
 }

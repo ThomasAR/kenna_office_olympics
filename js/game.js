@@ -1,5 +1,5 @@
 //GAME SETTINGS
-var PLAYER_VELOCITY = 4;
+var PLAYER_VELOCITY = 6;
 var GRAVITY = 0.5;
 var POWER_MULTIPLIER = 0.4;
 
@@ -59,6 +59,7 @@ var pencilDY = 0;
 
 var scoreFont;
 
+
 function preload() {
     getQueryStringParams();
 
@@ -107,11 +108,17 @@ function setup() {
 }
 
 function draw() {
+    frameRate(1000);
+    
+    if(frameCount > 30000) {
+        frameRate(30);
+    }
 
 
     drawSky();
     push();
     drawGround();
+    drawGrassBits();
     drawPlayer();
 
     if (spaceDown || spaceUp) {
@@ -260,11 +267,12 @@ function Pencil() {
             pencilDY = -170;
             pop();
             drawGround();
+            drawGrassBits();
             //set landed coordinates to keep pencil at
             landedX = landedX ? landedX : this.xSpeed;
             landedY = landedY ? landedY : this.ySpeed;
             this.xSpeed = 0;
-            console.log(-pencilDX);
+            //console.log(-pencilDX);
             noLoop();
             endGame();
         }
@@ -356,6 +364,34 @@ function drawGround() {
     rect(0, 880 + pencilDY, width, height);
 }
 
+var grassBits = [];
+
+function drawGrassBits() {
+    console.log(grassBits.length); 
+    if(grassBits.length == 0 || width - grassBits[grassBits.length-1].x > 80) {
+        console.log("generating grass bit");
+        grassBits.push({
+            x:width,
+            y:880+Math.random()*300,
+            width:80,
+            height:20,
+            pencilDXStart:pencilDX, 
+            colorValue:100+Math.random()*15
+        });
+    }
+    if(grassBits[0].x < -100) {
+        grassBits.shift();
+    }
+    
+    for(var i = 0; i < grassBits.length; i++) {
+        fill(color(0, grassBits[i].colorValue, 0));
+        rect(grassBits[i].x + pencilDX - grassBits[i].pencilDXStart, grassBits[i].y + pencilDY, grassBits[i].width, grassBits[i].height);
+        if(PLAYER_STATE == 0) {
+            grassBits[i].x-=PLAYER_VELOCITY;
+        }
+    }
+}
+
 
 function drawScore() {
     
@@ -418,3 +454,21 @@ function ordinal_suffix_of(i) {
     }
     return "th";
 }
+
+$(document).ready(function() {
+    $('#TryAgain').click(function() {
+        //TODO: KEEP TRACK OF BEST SCORE AND ATTEMPTS
+        console.log("try again");
+        window.location.reload();
+    });
+
+    $('#Submit').click(function() {
+        //TODO: SUBMIT FUNCTIONALITY
+        console.log("submit");
+    });
+
+    $('#SelectCharacter').click(function() {
+        console.log("select character");
+        window.location.href='./index.html';
+    });
+});
