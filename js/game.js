@@ -46,6 +46,7 @@ var avatar;
 var character;
 var nickname;
 var headImage;
+var cloudImages = [];
 
 var testVelocity = 25;
 
@@ -89,6 +90,14 @@ function preload() {
     throwAnimation.push(loadImage('../resources/animations/throw/throw-02.png'));
     throwAnimation.push(loadImage('../resources/animations/throw/throw-03.png'));
     throwAnimation.push(loadImage('../resources/animations/throw/throw-04.png'));
+
+    cloudImages.push(loadImage('../resources/clouds/cloud-01.png'));
+    cloudImages.push(loadImage('../resources/clouds/cloud-02.png'));
+    cloudImages.push(loadImage('../resources/clouds/cloud-03.png'));
+    cloudImages.push(loadImage('../resources/clouds/cloud-04.png'));
+    cloudImages.push(loadImage('../resources/clouds/cloud-05.png'));
+    cloudImages.push(loadImage('../resources/clouds/cloud-06.png'));
+    cloudImages.push(loadImage('../resources/clouds/cloud-06.png')); //Add a duplicate incase overflow (see cloud generation math if u care)
 }
 
 function setup() {
@@ -97,14 +106,13 @@ function setup() {
     MIN_COLOR = color(204, 255, 255);
 
     createCanvas(1920, 1080);
-    cam = new Camera();
     angleMode(DEGREES);
     rectMode(CENTER);
 
     PLAYER_STATE = 0;
     // console.log(query.substring())
     // createCanvas(1920, 1080)
-
+    drawInitialGrassBits();
 }
 
 function draw() {
@@ -120,6 +128,7 @@ function draw() {
     drawGround();
     drawGrassBits();
     drawPlayer();
+    
 
     if (spaceDown || spaceUp) {
         showPowerBar();
@@ -200,7 +209,6 @@ function PowerSlider() {
 
     //stop slider
     if (spaceUp) {
-        console.log(sliderPower);
         sliderSpeed = 0;
     }
     sliderPower += sliderSpeed;
@@ -224,7 +232,6 @@ function throwAngle() {
     if (angleThrow === 0) angleSpeed = 2;
     angleThrow += spaceDown ? 0 : angleSpeed; //stop angle movement when space is held down
     translate(playerX + 18, 730) //follow player
-    cam.translate(1000, 0);
     rotate(angleThrow);
     fill(0);
     image(pencilImage, 0, 0, 10, 100);
@@ -367,13 +374,11 @@ function drawGround() {
 var grassBits = [];
 
 function drawGrassBits() {
-    console.log(grassBits.length); 
-    if(grassBits.length == 0 || width - grassBits[grassBits.length-1].x > 80) {
-        console.log("generating grass bit");
+    if(grassBits.length == 0 || width - grassBits[grassBits.length-1].x > 200) {
         grassBits.push({
             x:width,
             y:880+Math.random()*300,
-            width:80,
+            width:80,           
             height:20,
             pencilDXStart:pencilDX, 
             colorValue:100+Math.random()*15
@@ -390,14 +395,45 @@ function drawGrassBits() {
             grassBits[i].x-=PLAYER_VELOCITY;
         }
     }
+       
 }
 
+function drawInitialGrassBits() {
+
+    for (var x = width; x > 0; x-=200) {
+        var bit = {
+            x:x,
+            y:880+Math.random()*300,
+            width:80,
+            height:20,
+            pencilDXStart:pencilDX, 
+            colorValue:100+Math.random()*15
+        };
+
+        fill(color(0, bit.colorValue, 0));
+        rect(bit.x + pencilDX - bit.pencilDXStart, bit.y + pencilDY, bit.width, bit.height);
+        bit.x-=PLAYER_VELOCITY;
+
+        grassBits.push(bit);
+
+    }
+}
+
+var clouds = [];
+
+function drawClouds() {
+    tint(255, 128+Math.random()*128);
+    image(cloudImages[Math.floor(Math.random()*6)])
+
+
+}
 
 function drawScore() {
     
     rectMode(CENTER);
     textAlign(CENTER);
-    textSize(100);
+    //textSize(100+20*Math.abs(sin(frameCount*4)));
+    textSize(100); 
     fill(255);
     stroke(0);
     strokeWeight(5);
@@ -430,7 +466,7 @@ function getQueryStringParams() {
     let nicknameIndex = query.indexOf(nicknameSearch);
     let characterIndex = query.indexOf(characterSearch);
     let avatarIndex = query.indexOf(avatarSearch);
-
+ 
     nickname = query.substring(nicknameIndex + nicknameSearch.length, characterIndex).replace("%", " ");
     character = query.substring(characterIndex + characterSearch.length, avatarIndex).replace("%", " ");
     avatar = query.substring(avatarIndex + avatarSearch.length, query.length)
