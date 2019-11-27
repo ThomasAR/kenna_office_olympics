@@ -5,6 +5,7 @@ var POWER_MULTIPLIER = 0.4;
 
 var MIN_HEIGHT = 0;
 var MAX_HEIGHT = 10000;
+var GRASS_FRICTION = 2;
 //END GAME SETTINGS
 
 
@@ -112,18 +113,14 @@ function setup() {
     PLAYER_STATE = 0;
     // console.log(query.substring())
     // createCanvas(1920, 1080)
+    drawInitialClouds();
     drawInitialGrassBits();
 }
 
 function draw() {
-    frameRate(1000);
-    
-    if(frameCount > 30000) {
-        frameRate(30);
-    }
-
 
     drawSky();
+    drawClouds();
     push();
     drawGround();
     drawGrassBits();
@@ -278,10 +275,14 @@ function Pencil() {
             //set landed coordinates to keep pencil at
             landedX = landedX ? landedX : this.xSpeed;
             landedY = landedY ? landedY : this.ySpeed;
-            this.xSpeed = 0;
+            this.xSpeed -= GRASS_FRICTION;
+            if(this.xSpeed <= 0) {
+                this.xSpeed = 0;
+                noLoop();
+                endGame();
+            }
             //console.log(-pencilDX);
-            noLoop();
-            endGame();
+            
         }
         else {
             rotateX = this.xSpeed;
@@ -374,12 +375,11 @@ function drawGround() {
 var grassBits = [];
 
 function drawGrassBits() {
-    if(grassBits.length == 0 || width - grassBits[grassBits.length-1].x > 200) {
+
+    if(grassBits.length == 0 || width - (grassBits[grassBits.length-1].x + pencilDX - grassBits[grassBits.length-1].pencilDXStart) > 200) {
         grassBits.push({
             x:width,
             y:880+Math.random()*300,
-            width:80,           
-            height:20,
             pencilDXStart:pencilDX, 
             colorValue:100+Math.random()*15
         });
@@ -390,7 +390,7 @@ function drawGrassBits() {
     
     for(var i = 0; i < grassBits.length; i++) {
         fill(color(0, grassBits[i].colorValue, 0));
-        rect(grassBits[i].x + pencilDX - grassBits[i].pencilDXStart, grassBits[i].y + pencilDY, grassBits[i].width, grassBits[i].height);
+        rect(grassBits[i].x + pencilDX - grassBits[i].pencilDXStart, grassBits[i].y + pencilDY, 80, 20);
         if(PLAYER_STATE == 0) {
             grassBits[i].x-=PLAYER_VELOCITY;
         }
@@ -412,7 +412,6 @@ function drawInitialGrassBits() {
 
         fill(color(0, bit.colorValue, 0));
         rect(bit.x + pencilDX - bit.pencilDXStart, bit.y + pencilDY, bit.width, bit.height);
-        bit.x-=PLAYER_VELOCITY;
 
         grassBits.push(bit);
 
@@ -421,9 +420,50 @@ function drawInitialGrassBits() {
 
 var clouds = [];
 
+function drawInitialClouds() {
+    for (var x = width; x > 0; x-=800) {
+        var cloud = {
+            x:x,
+            y:-pencilDY + Math.random()*height,
+            pencilDXStart:pencilDX, 
+            width:200,
+            height:140,
+            imageIndex:Math.floor(Math.random()*6),
+            floatOffset:Math.random()*360
+        };
+
+        image(cloudImages[cloud.imageIndex], cloud.x + pencilDX - cloud.pencilDXStart, cloud.y + pencilDY, cloud.width, cloud.height)
+
+        clouds.push(cloud);
+
+    }
+
+}
+
 function drawClouds() {
-    tint(255, 128+Math.random()*128);
-    image(cloudImages[Math.floor(Math.random()*6)])
+   
+    if(clouds.length == 0 || width - (clouds[clouds.length-1].x + pencilDX - clouds[clouds.length-1].pencilDXStart) > 800) {
+        clouds.push({
+            x:width,
+            y:-pencilDY + Math.random()*height,
+            pencilDXStart:pencilDX, 
+            width:200,
+            height:140,
+            imageIndex:Math.floor(Math.random()*6),
+            floatOffset:Math.random()*360
+        });
+    }
+    if(clouds[0].x < -500) {
+        clouds.shift();
+    }
+    
+    for(var i = 0; i < clouds.length; i++) {
+        image(cloudImages[clouds[i].imageIndex], clouds[i].x + pencilDX - clouds[i].pencilDXStart, clouds[i].y + pencilDY, clouds[i].width, clouds[i].height)
+        clouds[i].y+=sin(3*(frameCount+clouds[i].floatOffset))/3;
+        if(PLAYER_STATE == 0) {
+            clouds[i].x-=PLAYER_VELOCITY/2;
+        }
+    }
 
 
 }
