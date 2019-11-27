@@ -139,9 +139,7 @@ function draw() {
         throwAngle();
     }
 
-    
-    //FIRST PARAM: isInPlayersHand, PENCIL MECHANICS CHANGE WHEN NOT IN PLAYERS HAND OBVIOUSLY, I.E. ON RELEASE OF SPACE BAR THIS WOULD BECOME FALSE.
-    // drawPencil(true, playerX);
+
 
     //FRAME COUNTER FOR RUNNING ANIMATION
     currentFrame += 0.3;
