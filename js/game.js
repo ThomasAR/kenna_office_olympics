@@ -8,8 +8,8 @@ var MAX_HEIGHT = 10000;
 var GRASS_FRICTION = 2;
 //END GAME SETTINGS
 
-
-
+var cheatCode = "";
+var CHEAT_ENABLED;
 
 
 var pencil;
@@ -135,9 +135,18 @@ function draw() {
         pencil.show();
         pop();
         drawScore();
+        if(showCheatMessage) {
+            drawCheatMessage();
+        }
     } else {
         throwAngle();
+        if(showCheatMessage) {
+            pop();
+            drawCheatMessage();
+        }
     }
+
+  
 
 
 
@@ -158,11 +167,31 @@ function showPowerBar() {
     // ellipse(0, 0, 20, 100);
 }
 
+
 function keyPressed() {
     if (key === " ") {
         spaceDown = true;
 
+    } else {
+        console.log(cheatCode);
+        if(cheatCode == "kenny") {
+            return;
+        }
+        cheatCode += key.toString();
+        if(cheatCode == "kenny") {
+            CHEAT_ENABLED = true;
+            showCheatMessage = true;
+
+            console.log("enabled cheats");
+        }
+        else {
+            setTimeout(function() {
+                cheatCode = "";
+            }, 700);
+        }
+        
     }
+
 }
 
 function keyReleased() {
@@ -235,7 +264,12 @@ function throwAngle() {
 
 function Pencil() {
     let angle = angleThrow;
-    let power = releasePower;
+    let power = 0;
+    if(CHEAT_ENABLED) {
+        power = releasePower * 5;
+    } else {
+        power = releasePower;
+    }
     this.x = playerX;
     this.y = 680;
     this.r = 30;
@@ -252,7 +286,17 @@ function Pencil() {
         translate(this.x, this.y);
 
         //rotate based on tangent line of current point on the curve
-        var rotation = -1 * atan((landedX ? landedX : this.xSpeed) / (landedY ? landedY : this.ySpeed));
+        if(CHEAT_ENABLED) {
+            if(pencilDY - this.ySpeed < -170) {
+                rotation = 135;
+            }
+            else {
+                rotation = (frameCount % 360) * 20;
+            }
+        }
+        else { 
+            var rotation = -1 * atan((landedX ? landedX : this.xSpeed) / (landedY ? landedY : this.ySpeed));
+        }
 
         rotate(rotation < 0 ? 90 + (90 - Math.abs(rotation)) : rotation);
         imageMode(CENTER);
@@ -424,7 +468,7 @@ function drawInitialClouds() {
             x:x,
             y:-pencilDY + Math.random()*height,
             pencilDXStart:pencilDX, 
-            width:200,
+            width:250,
             height:140,
             imageIndex:Math.floor(Math.random()*6),
             floatOffset:Math.random()*360
@@ -445,7 +489,7 @@ function drawClouds() {
             x:width,
             y:-pencilDY + Math.random()*height,
             pencilDXStart:pencilDX, 
-            width:200,
+            width:250,
             height:140,
             imageIndex:Math.floor(Math.random()*6),
             floatOffset:Math.random()*360
@@ -477,6 +521,25 @@ function drawScore() {
     strokeWeight(5);
     textFont(scoreFont);
     text((-pencilDX/10).toFixed(1) + " m", width/2, 300)
+}
+
+var showCheatMessage = false;
+var messageSize = 0;
+function drawCheatMessage() {
+    console.log("suhh")
+    textAlign(CENTER);
+    rectMode(CENTER);
+    textSize(messageSize);
+    var textColor = color(255,0,0);
+    textColor.setAlpha(255-messageSize);
+    noStroke();
+    fill(textColor);
+    text("Enabled cheats!", width/2, height/2);
+    noTint();
+    messageSize+=3;
+    if(messageSize > 254) {
+        showCheatMessage = false;
+    }
 }
 
 
