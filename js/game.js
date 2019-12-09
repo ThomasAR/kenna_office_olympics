@@ -51,6 +51,8 @@ var cloudImages = [];
 var elfHatImage;
 var testVelocity = 25;
 
+houseImages = [];
+
 
 let SERVER_URL = "http://127.0.0.1:5000";
 
@@ -104,6 +106,15 @@ function preload() {
     cloudImages.push(loadImage('../resources/clouds/cloud-05.png'));
     cloudImages.push(loadImage('../resources/clouds/cloud-06.png'));
     cloudImages.push(loadImage('../resources/clouds/cloud-06.png')); //Add a duplicate incase overflow (see cloud generation math if u care)
+
+    houseImages.push(loadImage('../resources/houses/house_1.png'))
+    houseImages.push(loadImage('../resources/houses/house_2.png'))
+    houseImages.push(loadImage('../resources/houses/house_3.png'))
+    houseImages.push(loadImage('../resources/houses/house_4.png'))
+    houseImages.push(loadImage('../resources/houses/house_5.png'))
+    houseImages.push(loadImage('../resources/houses/house_5.png'))
+
+
 }
 
 function setup() {
@@ -120,7 +131,7 @@ function setup() {
     // createCanvas(1920, 1080)
     // updateScores();
     drawInitialClouds();
-    drawInitialGrassBits();
+    // drawInitialGrassBits();
 }
 
 function draw() {
@@ -129,7 +140,8 @@ function draw() {
     drawClouds();
     push();
     drawGround();
-    drawGrassBits();
+    // drawGrassBits();
+    drawHouses();
     drawPlayer();
 
 
@@ -307,7 +319,7 @@ function Pencil() {
                 var rotation = 90;
             }
             else {
-                
+
                 var rotation = -1 * atan((landedX ? landedX : this.xSpeed) / (landedY ? landedY : this.ySpeed));
             }
 
@@ -328,7 +340,8 @@ function Pencil() {
             pencilDY = -157;
             pop();
             drawGround();
-            drawGrassBits();
+            // drawGrassBits();
+            // drawHouses(); 
             //set landed coordinates to keep pencil at
             landedX = landedX ? landedX : this.xSpeed;
             landedY = landedY ? landedY : this.ySpeed;
@@ -428,6 +441,30 @@ function drawGround() {
     fill(color(250, 250, 250));
     rectMode(CORNER);
     rect(0, 880 + pencilDY, width, height);
+}
+
+var scrollingHouses = [];
+function drawHouses() {
+
+    if (scrollingHouses.length == 0 || width - (scrollingHouses[scrollingHouses.length - 1].x + pencilDX - scrollingHouses[scrollingHouses.length - 1].pencilDXStart) > 700) {
+        scrollingHouses.push({
+            x: width,
+            y: 765,
+            pencilDXStart: pencilDX,
+            // colorValue: 210 + Math.random() * 15
+            index: Math.floor(Math.random() * 5)
+        });
+    }
+    if (scrollingHouses[0].x < -200) {
+        scrollingHouses.shift();
+    }
+
+    for (var i = 0; i < scrollingHouses.length; i++) {
+        image(houseImages[scrollingHouses[i].index], scrollingHouses[i].x + pencilDX - scrollingHouses[i].pencilDXStart, scrollingHouses[i].y + pencilDY, 200, 125);
+        if (PLAYER_STATE == 0) {
+            scrollingHouses[i].x -= PLAYER_VELOCITY;
+        }
+    }
 }
 
 var grassBits = [];
