@@ -26,6 +26,12 @@ var MAX_HEIGHT = 1000;
 var currentHeight = 0;
 
 var testVelocity = 25;
+
+
+let SERVER_URL = "http://127.0.0.1:5000";
+
+let scoreRecorded = false;
+
 function preload() {
     runAnimation.push(loadImage('../resources/animations/run/run-01.png'));
     runAnimation.push(loadImage('../resources/animations/run/run-02.png'));
@@ -54,6 +60,7 @@ function setup() {
 
     // console.log(query.substring())
     // createCanvas(1920, 1080)
+    // updateScores();
 }
 
 function draw() {
@@ -87,8 +94,6 @@ function draw() {
         throwAngle();
     }
 
-    //FIRST PARAM: isInPlayersHand, PENCIL MECHANICS CHANGE WHEN NOT IN PLAYERS HAND OBVIOUSLY, I.E. ON RELEASE OF SPACE BAR THIS WOULD BECOME FALSE.
-    // drawPencil(true, playerX);
 
     //FRAME COUNTER FOR RUNNING ANIMATION
     currentFrame += 0.3;
@@ -203,6 +208,8 @@ function Pencil() {
             this.xSpeed = 0;
             console.log(landedX);
             noLoop();
+            updateScores();
+            this.stop();
         }
         else {
             rotateX = this.xSpeed;
@@ -253,7 +260,17 @@ function drawGround() {
     rect(0, 880, width, height - 880);
 }
 
+function updateScores() {
+    $.ajax({
+        type: 'GET',
+        url: SERVER_URL + "/UpdateScores",
+        crossDomain: true,
+        success: function (res) {
+            scoreRecorded = true;
+        }
+    })
 
+}
 
 
 
