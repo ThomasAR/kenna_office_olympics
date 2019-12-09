@@ -81,7 +81,7 @@ function preload() {
 
 
 
-    pencilImage = loadImage('../resources/pencil.png');
+    pencilImage = loadImage('../resources/sleigh.png');
     runAnimation.push(loadImage('../resources/animations/run/run-01.png'));
     runAnimation.push(loadImage('../resources/animations/run/run-02.png'));
     runAnimation.push(loadImage('../resources/animations/run/run-03.png'));
@@ -139,14 +139,16 @@ function draw() {
     if (spaceUp) {
         pencil.show();
         pop();
+        drawPlayer();
         drawScore();
         if (showCheatMessage) {
             drawCheatMessage();
         }
     } else {
         throwAngle();
+        pop();
+        drawPlayer();
         if (showCheatMessage) {
-            pop();
             drawCheatMessage();
         }
     }
@@ -260,10 +262,10 @@ function throwAngle() {
     if (angleThrow === 90) angleSpeed = -2;
     if (angleThrow === 0) angleSpeed = 2;
     angleThrow += spaceDown ? 0 : angleSpeed; //stop angle movement when space is held down
-    translate(playerX + 18, 730) //follow player
+    translate(playerX, 690) //follow player
     rotate(angleThrow);
     fill(0);
-    image(pencilImage, 0, 0, 10, 100);
+    image(pencilImage, 0, 0, 120, 160);
     imageMode(CORNER);
 }
 
@@ -292,20 +294,27 @@ function Pencil() {
 
         //rotate based on tangent line of current point on the curve
         if (CHEAT_ENABLED) {
-            if (pencilDY - this.ySpeed < -170) {
-                rotation = 135;
+            if (pencilDY - this.ySpeed < -157) {
+                rotation = 90;
             }
             else {
                 rotation = (frameCount % 360) * 20;
             }
         }
         else {
-            var rotation = -1 * atan((landedX ? landedX : this.xSpeed) / (landedY ? landedY : this.ySpeed));
+            if (pencilDY <= -157) { //if landed
+                var rotation = 90;
+            }
+            else {
+                
+                var rotation = -1 * atan((landedX ? landedX : this.xSpeed) / (landedY ? landedY : this.ySpeed));
+            }
+
         }
 
         rotate(rotation < 0 ? 90 + (90 - Math.abs(rotation)) : rotation);
         imageMode(CENTER);
-        image(pencilImage, 0, 0, 10, 100);
+        image(pencilImage, 0, 0, 120, 160);
         imageMode(CORNER);
 
 
@@ -314,8 +323,8 @@ function Pencil() {
         //this.x += this.xSpeed;
         pencilDY -= this.ySpeed;
         pencilDX -= this.xSpeed;
-        if (pencilDY < -170) { //if landed
-            pencilDY = -170;
+        if (pencilDY < -157) { //if landed
+            pencilDY = -157;
             pop();
             drawGround();
             drawGrassBits();
