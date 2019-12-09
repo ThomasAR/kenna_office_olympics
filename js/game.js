@@ -48,7 +48,7 @@ var character;
 var nickname;
 var headImage;
 var cloudImages = [];
-
+var elfHatImage;
 var testVelocity = 25;
 
 
@@ -78,6 +78,7 @@ function preload() {
 
 
     scoreFont = loadFont('../resources/Neucha-Regular.ttf');
+    elfHatImage = loadImage('../resources/elfhat.png');
 
 
 
@@ -359,6 +360,7 @@ function drawPlayer() {
     }
     //DRAW HEAD
     image(headImage, playerX + 45 + pencilDX, 695 + 2 * sin(map(currentFrame, 0, 8, 0, 360)) + pencilDY, 65, 75);
+    image(elfHatImage, playerX + 15 + pencilDX, 650 + 2 * sin(map(currentFrame, 0, 8, 0, 360)) + pencilDY, 80, 70);
 
     //MOVE PLAYER
     switch (PLAYER_STATE) {
