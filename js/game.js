@@ -66,6 +66,9 @@ var pencilDY = 0;
 
 var scoreFont;
 
+var scoreBoard;
+var position = 1;
+
 
 function preload() {
     getQueryStringParams();
@@ -114,6 +117,21 @@ function preload() {
     houseImages.push(loadImage('../resources/houses/house_5.png'))
 
 
+    $.ajax({
+        type: 'GET',
+        url: FLASK_SERVER_URL + "/GetScores",
+        crossDomain: true,
+        success: function (res) {
+            let place = 1;
+            let data = JSON.parse(res);
+            data = data.sort((a, b) => {
+                return b.score - a.score
+            })
+            scoreBoard = data;
+        }
+    })
+
+
 }
 
 function setup() {
@@ -141,7 +159,7 @@ function draw() {
     drawGround();
     // drawGrassBits();
     drawHouses();
-    drawPlayer();
+    //drawPlayer();
 
 
     if (spaceDown || spaceUp) {
@@ -613,9 +631,37 @@ function drawCheatMessage() {
 
 function endGame() {
     //TODO: APPEND SCORE TO SCORES
-    var position = 1;
+    position = 1;
+    var score = ((-pencilDX / 10).toFixed(1)).toString();
+    console.log(score);
+    console.log(scoreBoard);
+    for(var i = 0; i < scoreBoard.length; i++) {
+        console.log(scoreBoard[i]);
+        if(score - scoreBoard[i].score > 0) {
+            position = i+1;
+            console.log(position);
+            break;
+        }
+    }
+    position = 3;
+    switch (position) {
+        case 1:
+            $('#MedalImg').attr('src', '../resources/medals/first.png');
+            $('#medal').css("background","none");
+            break;
+        case 2:
+            $('#MedalImg').attr('src', '../resources/medals/second.png');
+            $('#medal').css("background","none");
+            break;
+        case 3:
+            $('#MedalImg').attr('src', '../resources/medals/third.png');
+            $('#medal').css("background","none");
+            break;
+        default:
+            $('#MedalImg').attr('src', '../resources/medals/third.png');
+            break;
+    }
 
-    //TODO: SET VALUES IN END SCREEN
     $('#Score').html((-pencilDX / 10).toFixed(1) + " m");
     $('#position').html(position);
     $('#ordinal').html(ordinal_suffix_of(position));

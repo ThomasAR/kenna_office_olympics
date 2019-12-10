@@ -56,18 +56,27 @@ canvas{
 #EndScreen #medal {
     position: absolute;
     left: -36px;
-    top: -36px;
+    top: -40px;
     width: 135px;
     height: 135px;
     border-radius: 175px;
-    background: gold;
+    
     color: white;
     text-shadow: 0 0 3px black;
     font-size: 49px;
     line-height: 106px;
     font-weight: bold;
-    box-shadow: 0 0 20px 0px #00000061;
+    background:#d83535;
     padding-top: -2px;
+}
+
+#MedalImg {
+    position: absolute;
+    left: -36px;
+    top: -36px;
+    width: 135px;
+    height: 180px;
+
 }
 
 button{
@@ -99,4 +108,21 @@ button#Submit {
     content:'';
     display:inline-block;
     margin:0 auto;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+#medal{
+    animation: bounce 0.8s ease-in-out infinite alternate;
+}
+
+#MedalImg{
+    animation: bounce 0.8s ease-in-out infinite alternate;
 }
