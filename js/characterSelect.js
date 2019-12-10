@@ -44,10 +44,12 @@ let populateCharacters = (characters) => {
     let characterSelect = $("#characterSelect");
     characterSelect.empty();
     characters.forEach(c => {
+        let image = c.image;
+        if (c.coop && c.coop === true) image = imagePath + c.image;
         let character = "";
         character += "<div class='character' dataCharacter='" + JSON.stringify(c) + "'>";
         character += '<div class="characterImageContainer">';
-        character += '<img class="characterImage" src="' + c.image + '" />';
+        character += '<img class="characterImage" src="' + image + '" />';
         character += '</div>';
         character += '<div class="characterName">';
         character += c.firstName + '<br />' + c.lastName;

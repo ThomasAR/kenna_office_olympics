@@ -1,8 +1,25 @@
 <html>
   <head>
+    <script src="constants.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
     <script src="../resources/p5.min.js"></script>
+    <script src="../libraries/p5.canvascam.js"></script>
     <script src="../js/game.js"></script>
     <link rel="stylesheet" type="text/css" href="./game.css">
   </head>
   <body>
-  </body
+    <div id="EndScreenContainer">
+      <div id="EndScreen">
+        <div id="medal">1<sup id="ordinal">st</sup></div>
+        <p>You threw Santa:</p>
+        <div id="Score">2336.1 m</div>
+        <button id="Submit">Submit</button>
+        <button id="TryAgain">Try Again</button>
+        <span class="spacer"></span>
+        <button id="SelectCharacter">Main Menu</button> 
+      </div>
+    </div>
+  </body>
