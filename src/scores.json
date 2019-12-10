@@ -1,478 +1,80 @@
 [
     {
-        "nickname": "Thomas",
-        "character": "Thomas Arsenault",
+        "nickname": "Jeffrey Bowles",
+        "character": "Jeffrey Bowles",
+        "avatar": "Leadership__0006_Leadership_Jeff_Bowles_Adjust.png",
+        "score": "881.8"
+    },
+    {
+        "nickname": "Werner Anders",
+        "character": "Werner Anders",
+        "avatar": "Leadership__0000_Leadership_Werner_Anders3_Adjust.png",
+        "score": "2556.4"
+    },
+    {
+        "nickname": "Syed Saad Ain",
+        "character": "Syed Saad Ain",
+        "avatar": "Coop_Syed_Ain.png",
+        "score": "3031.8"
+    },
+    {
+        "nickname": "Jeffrey Bowles",
+        "character": "Jeffrey Bowles",
+        "avatar": "Leadership__0006_Leadership_Jeff_Bowles_Adjust.png",
+        "score": "71545.3"
+    },
+    {
+        "nickname": "Jeffrey Bowles",
+        "character": "Jeffrey Bowles",
+        "avatar": "Leadership__0006_Leadership_Jeff_Bowles_Adjust.png",
+        "score": "1918.7"
+    },
+    {
+        "nickname": "Jeffrey Bowles",
+        "character": "Jeffrey Bowles",
+        "avatar": "Leadership__0006_Leadership_Jeff_Bowles_Adjust.png",
+        "score": "44.3"
+    },
+    {
+        "nickname": "Llewelyn Clements",
+        "character": "Llewelyn Clements",
+        "avatar": "Staff_LlewelynClements_adjust.png",
+        "score": "1309.2"
+    },
+    {
+        "nickname": "Llewelyn Clements",
+        "character": "Llewelyn Clements",
+        "avatar": "Staff_LlewelynClements_adjust.png",
+        "score": "237.8"
+    },
+    {
+        "nickname": "Manish Lakhotia",
+        "character": "Manish Lakhotia",
+        "avatar": "Staff_Manish_Lakhotia1_Adjust.png",
+        "score": "65.9"
+    },
+    {
+        "nickname": "yeet",
+        "character": "Jeffrey Bowles",
+        "avatar": "Leadership__0006_Leadership_Jeff_Bowles_Adjust.png",
+        "score": "858.9"
+    },
+    {
+        "nickname": "nicotine airdrie",
+        "character": "Nick Airdrie",
+        "avatar": "Coop_Nick_Airdrie.png",
+        "score": "1635.4"
+    },
+    {
+        "nickname": "yeet",
+        "character": "Thomas_Arsenault",
         "avatar": "Thomas.png",
-        "score": 100
+        "score": "100"
     },
     {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
-    },
-    {
-        "nickname": "Tim",
-        "character": "Tim Cook",
-        "score": 40
+        "nickname": "yeet",
+        "character": "Thomas_Arsenault",
+        "avatar": "Thomas.png",
+        "score": "100"
     }
 ]

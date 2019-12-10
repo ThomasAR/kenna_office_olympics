@@ -54,7 +54,6 @@ var testVelocity = 25;
 houseImages = [];
 
 
-let SERVER_URL = "http://127.0.0.1:5000";
 
 let scoreRecorded = false;
 var cam;
@@ -514,9 +513,12 @@ function drawInitialGrassBits() {
 }
 
 function updateScores() {
+    let reqNickname = nickname.replace(" ", "%");
+    let reqCharacter = character.replace(" ", "%");
+    let request = `/UpdateScores?&nickname=${reqNickname}&character=${reqCharacter}&avatar=${avatar}&score=${(-pencilDX / 10).toFixed(1)}`
     $.ajax({
         type: 'GET',
-        url: SERVER_URL + "/UpdateScores",
+        url: FLASK_SERVER_URL + request,
         crossDomain: true,
         success: function (res) {
             scoreRecorded = true;
@@ -664,8 +666,8 @@ $(document).ready(function () {
     });
 
     $('#Submit').click(function () {
-        //TODO: SUBMIT FUNCTIONALITY
-        console.log("submit");
+        updateScores();
+        window.location.href = './scores.html';
     });
 
     $('#SelectCharacter').click(function () {

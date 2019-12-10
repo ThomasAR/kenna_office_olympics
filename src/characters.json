@@ -778,5 +778,173 @@
     "lastName": "Zschach",
     "image": "http:\/\/kenna.ca\/wp-content\/uploads\/2019\/09\/Staff__LauraZschach_adjust.jpg",
     "avatar": "Staff__LauraZschach_adjust.png"
+  },
+  {
+    "firstName": "Amenah",
+    "lastName": "Al-Helli",
+    "image": "Coop_Amenah_Al-Helli.jpg",
+    "avatar": "Coop_Amenah_Al-Helli.png",
+    "coop": true
+  },
+  {
+    "firstName": "Brianna",
+    "lastName": "Scheffer",
+    "image": "Coop_Brianna_Scheffer.jpg",
+    "avatar": "Coop_Brianna_Scheffer.png",
+    "coop": true
+  },
+  {
+    "firstName": "Brooklyn",
+    "lastName": "Kutasienski",
+    "image": "Coop_Brooklyn_Kutasienski.jpg",
+    "avatar": "Coop_Brooklyn_Kutasienski.png",
+    "coop": true
+  },
+  {
+    "firstName": "Cathy",
+    "lastName": "Cheng",
+    "image": "Coop_Cathy_Cheng.jpg",
+    "avatar": "Coop_Cathy_Cheng.png",
+    "coop": true
+  },
+  {
+    "firstName": "Daniela Ana",
+    "lastName": "Florea",
+    "image": "Coop_Daniela_Ana_Florea.jpg",
+    "avatar": "Coop_Daniela_Ana_Florea.png",
+    "coop": true
+  },
+  {
+    "firstName": "Darren",
+    "lastName": "Rothblott",
+    "image": "Coop_Darren_Rothblott.jpg",
+    "avatar": "Coop_Darren_Rothblott.png",
+    "coop": true
+  },
+  {
+    "firstName": "Emma",
+    "lastName": "Annett",
+    "image": "Coop_Emma_Annett.jpg",
+    "avatar": "Coop_Emma_Annett.png",
+    "coop": true
+  },
+  {
+    "firstName": "Jared",
+    "lastName": "Clark",
+    "image": "Coop_Jared_Clark.jpg",
+    "avatar": "Coop_Jared_Clark.png",
+    "coop": true
+  },
+  {
+    "firstName": "Joel",
+    "lastName": "Silas",
+    "image": "Coop_Joel_Silas.jpg",
+    "avatar": "Coop_Joel_Silas.png",
+    "coop": true
+  },
+  {
+    "firstName": "Joshua",
+    "lastName": "Gorospe",
+    "image": "Coop_Joshua_Gorospe.jpg",
+    "avatar": "Coop_Joshua_Gorospe.png",
+    "coop": true
+  },
+  {
+    "firstName": "Kihwan",
+    "lastName": "Paeng",
+    "image": "Coop_Kihwan_Paeng.jpg",
+    "avatar": "Coop_Kihwan_Paeng.png",
+    "coop": true
+  },
+  {
+    "firstName": "Nick",
+    "lastName": "Airdrie",
+    "image": "Coop_Nick_Airdrie.jpg",
+    "avatar": "Coop_Nick_Airdrie.png",
+    "coop": true
+  },
+  {
+    "firstName": "Prisha",
+    "lastName": "Rathi",
+    "image": "Coop_Prisha_Rathi.jpg",
+    "avatar": "Coop_Prisha_Rathi.png",
+    "coop": true
+  },
+  {
+    "firstName": "Rachel",
+    "lastName": "Radake",
+    "image": "Coop_Rachel_Radake.jpg",
+    "avatar": "Coop_Rachel_Radake.png",
+    "coop": true
+  },
+  {
+    "firstName": "Reesha",
+    "lastName": "Jagdeo",
+    "image": "Coop_Reesha_Jagdeo.jpg",
+    "avatar": "Coop_Reesha_Jagdeo.png",
+    "coop": true
+  },
+  {
+    "firstName": "Stephen",
+    "lastName": "Hwang",
+    "image": "Coop_Stephen_Hwang.jpg",
+    "avatar": "Coop_Stephen_Hwang.png",
+    "coop": true
+  },
+  {
+    "firstName": "Surajpratap",
+    "lastName": "Goraya",
+    "image": "Coop_Surajpratap_Goraya.jpg",
+    "avatar": "Coop_Surajpratap_Goraya.png",
+    "coop": true
+  },
+  {
+    "firstName": "Syed Saad",
+    "lastName": "Ain",
+    "image": "Coop_Syed_Ain.jpg",
+    "avatar": "Coop_Syed_Ain.png",
+    "coop": true
+  },
+  {
+    "firstName": "Tessa",
+    "lastName": "Brenders",
+    "image": "Coop_Tessa_Brenders.jpg",
+    "avatar": "Coop_Tessa_Brenders.png",
+    "coop": true
+  },
+  {
+    "firstName": "Thomas",
+    "lastName": "Arsenault",
+    "image": "Coop_Thomas_Arsenault.jpg",
+    "avatar": "Coop_Thomas_Arsenault.png",
+    "coop": true
+  },
+  {
+    "firstName": "William",
+    "lastName": "Ramshaw",
+    "image": "Coop_William_Ramshaw.jpg",
+    "avatar": "Coop_William_Ramshaw.png",
+    "coop": true
+  },
+  {
+    "firstName": "Xiaoling",
+    "lastName": "Liu",
+    "image": "Coop_Xiaoling_Liu.jpg",
+    "avatar": "Coop_Xiaoling_Liu.png",
+    "coop": true
+  },
+  {
+    "firstName": "Zahra",
+    "lastName": "Akhtar",
+    "image": "Coop_Zahra_Akhtar.jpg",
+    "avatar": "Coop_Zahra_Akhtar.png",
+    "coop": true
+  },
+  {
+    "firstName": "Zixiao",
+    "lastName": "Min",
+    "image": "Coop_Zixiao_Min.jpg",
+    "avatar": "Coop_Zixiao_Min.png",
+    "coop": true
   }
 ]

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Neucha', cursive;
+    font-family: 'Spoon', cursive;
     margin: 0;
 }
 .pageHeader {
@@ -108,4 +108,43 @@ body {
     cursor: pointer;
     font-size: 24px;
     border-radius: 4px;
+}
+
+.scoresTable {
+    width: 100%;
+    display: table;
+}
+
+.scoresTable tbody {
+    width: 100%;
+}
+
+.scoresTable tr {
+    width: 100%;
+    font-size: 24px;
+}
+
+.scoresTable th {
+    padding: 20px;
+}
+
+.scoresTable td {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.scoresTable .image {
+    width: 200px;
+}
+
+.scoresTable .place {
+    width: 40px;
+}
+.scoresTable .tableImage{
+    width: 150px;
+}
+
+.scoresTable .medal {
+    width: 60px;
 }
