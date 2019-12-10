@@ -643,7 +643,6 @@ function endGame() {
             break;
         }
     }
-    position = 3;
     switch (position) {
         case 1:
             $('#MedalImg').attr('src', '../resources/medals/first.png');
