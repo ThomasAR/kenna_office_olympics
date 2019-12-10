@@ -522,6 +522,8 @@ function updateScores() {
         crossDomain: true,
         success: function (res) {
             scoreRecorded = true;
+            window.location.href = './scores.html';
+
         }
     })
 
@@ -667,7 +669,6 @@ $(document).ready(function () {
 
     $('#Submit').click(function () {
         updateScores();
-        window.location.href = './scores.html';
     });
 
     $('#SelectCharacter').click(function () {
