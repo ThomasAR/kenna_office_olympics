@@ -1,1 +1,1 @@
-let FLASK_SERVER_URL = "https://a715613c.ngrok.io";
+let FLASK_SERVER_URL = "https://2440ef1b.ngrok.io";
