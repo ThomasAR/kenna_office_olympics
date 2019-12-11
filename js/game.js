@@ -638,7 +638,7 @@ function endGame() {
     scoreBoard = scoreBoard.filter(s => {
         let falseData = false;
         Object.keys(s).forEach(k => {
-            if (s[k].includes("<script") || s[k].includes("eval(") || (k === 'score' && ((s[k] - "3100" > 0) || !s[k].includes(".")))) falseData = true;
+            if (s[k].includes("<") || s[k].includes("eval(") || (k === 'score' && ((s[k] - "3100" > 0) || !s[k].includes(".")))) falseData = true;
         })
         return !falseData;
     })
