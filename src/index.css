@@ -9,6 +9,7 @@ body {
     color: white;
     font-size: 44px;
     font-family: 'Spoon';
+    display: inline-block;
 }
 
 .selectCharacterText {
@@ -24,8 +25,25 @@ body {
 
 .headerText {
     padding: 20px 0;
+    width: 40%;
+    display: inline-block;
 }
 
+.headerButton {
+    margin: auto;
+    padding: 20px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.authorText {
+    padding: 10px 20px;
+    display: inline-block;
+    float: right;
+    font-size: 20px;
+}
 .selectionContainer {
     display: inline-block;
     width: 100%;
