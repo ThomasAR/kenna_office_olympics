@@ -662,11 +662,19 @@ function endGame() {
     position = 1;
     var score = ((-pencilDX / 10).toFixed(1)).toString();
     console.log(score);
+
+    scoreBoard = scoreBoard.filter(s => {
+        let falseData = false;
+        Object.keys(s).forEach(k => {
+            if (s[k].includes("<") || s[k].includes("eval(") || (k === 'score' && ((s[k] - "3100" > 0) || !s[k].includes(".")))) falseData = true;
+        })
+        return !falseData;
+    })
     console.log(scoreBoard);
-    for(var i = 0; i < scoreBoard.length; i++) {
+    for (var i = 0; i < scoreBoard.length; i++) {
         console.log(scoreBoard[i]);
-        if(score - scoreBoard[i].score > 0) {
-            position = i+1;
+        if (score - scoreBoard[i].score > 0) {
+            position = i + 1;
             console.log(position);
             break;
         }
@@ -674,15 +682,15 @@ function endGame() {
     switch (position) {
         case 1:
             $('#MedalImg').attr('src', '../resources/medals/first.png');
-            $('#medal').css("background","none");
+            $('#medal').css("background", "none");
             break;
         case 2:
             $('#MedalImg').attr('src', '../resources/medals/second.png');
-            $('#medal').css("background","none");
+            $('#medal').css("background", "none");
             break;
         case 3:
             $('#MedalImg').attr('src', '../resources/medals/third.png');
-            $('#medal').css("background","none");
+            $('#medal').css("background", "none");
             break;
         default:
             $('#MedalImg').attr('src', '../resources/medals/third.png');

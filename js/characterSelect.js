@@ -10,6 +10,9 @@ $(document).ready(function () {
     let characters = "";
     $.getJSON('../src/characters.json', function (res) {
         characters = res;
+        characters.forEach(c => {
+            c.image = c.avatar.replace(".png", ".jpg");
+        })
         populateCharacters(characters);
     });
 
@@ -44,8 +47,8 @@ let populateCharacters = (characters) => {
     let characterSelect = $("#characterSelect");
     characterSelect.empty();
     characters.forEach(c => {
-        let image = c.image;
-        if (c.coop && c.coop === true) image = imagePath + c.image;
+        let image = imagePath + c.image;
+        // if (c.coop && c.coop === true) image = imagePath + c.image;
         let character = "";
         character += "<div class='character' dataCharacter='" + JSON.stringify(c) + "'>";
         character += '<div class="characterImageContainer">';
