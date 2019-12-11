@@ -71,6 +71,7 @@ var position = 1;
 
 var sleighPos;
 
+var presentImage;
 
 function preload() {
     getQueryStringParams();
@@ -87,7 +88,7 @@ function preload() {
     elfHatImage = loadImage('../resources/elfhat.png');
 
 
-
+    presentImage = loadImage('../resources/present.png');
     pencilImage = loadImage('../resources/sleigh.png');
     runAnimation.push(loadImage('../resources/animations/run/run-01.png'));
     runAnimation.push(loadImage('../resources/animations/run/run-02.png'));
@@ -157,6 +158,7 @@ function draw() {
 
     drawSky();
     drawClouds();
+    drawPresents();
     push();
     drawGround();
     // drawGrassBits();
@@ -169,7 +171,6 @@ function draw() {
     }
 
     if (spaceUp) {
-        //drawPresents();
         pencil.show();
         pop();
         drawPlayer();
@@ -389,21 +390,23 @@ function Pencil() {
 
 var presents = [];
 function drawPresents() {
-    if(frameCount % 60 == 0 && sleighPos) {
+    if(!spaceUp) return;
+
+    if(frameCount % 40 == 0 && sleighPos) {
        
         presents.push({
                 x: sleighPos.x,
                 y: sleighPos.y,
-                index: Math.floor(Math.random() * 5)
             });
         if (presents[0].x < -200) {
             presents.shift();
         }
     
-        for (var i = 0; i < presents.length; i++) {
-            image(presentImages[presents[i].index], presents[i].x, presents[i].y, 100, 100);
-            presents[i].y += 1;
-        }
+        
+    }
+    for (var i = 0; i < presents.length; i++) {
+        image(presentImage, presents[i].x, presents[i].y, 50, 50);
+        presents[i].y += 8;
     }
 }
 
