@@ -981,5 +981,12 @@
     "image": "Coop_Sukhvir_Thapar.jpg",
     "avatar": "Coop_Sukhvir_Thapar.png",
     "coop": true
+  },
+  {
+    "firstName": "Two",
+    "lastName": "Thirty",
+    "image": "Coop_Two_Thirty.jpg",
+    "avatar": "Coop_Two_Thirty.png",
+    "coop": true
   }
 ]
