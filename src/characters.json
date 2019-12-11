@@ -967,5 +967,26 @@
     "image": "Coop_Lindsey_Muir.jpg",
     "avatar": "Coop_Lindsey_Muir.png",
     "coop": true
+  },
+  {
+    "firstName": "Kenny",
+    "lastName": "",
+    "image": "Coop_Kenny.jpg",
+    "avatar": "Coop_Kenny.png",
+    "coop": true
+  },
+  {
+    "firstName": "Sukhvir",
+    "lastName": "Thapar",
+    "image": "Coop_Sukhvir_Thapar.jpg",
+    "avatar": "Coop_Sukhvir_Thapar.png",
+    "coop": true
+  },
+  {
+    "firstName": "Two",
+    "lastName": "Thirty",
+    "image": "Coop_Two_Thirty.jpg",
+    "avatar": "Coop_Two_Thirty.png",
+    "coop": true
   }
 ]
