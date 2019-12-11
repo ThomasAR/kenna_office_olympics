@@ -310,8 +310,8 @@ function Pencil() {
     } else {
         power = releasePower;
     }
-    power = 300;
-    angle = 46.5;
+    //power = 300;
+    //angle = 46.5;
     this.x = playerX;
     this.y = 680;
     this.r = 30;

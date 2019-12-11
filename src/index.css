@@ -113,6 +113,8 @@ body {
 
 #selectedCharacterImage {
     width: 125px;
+    margin-bottom: 301px;
+    margin-top: 100px;
 }
 
 #selectedCharacterName {
@@ -166,4 +168,25 @@ body {
 
 .scoresTable .medal {
     width: 60px;
+}
+
+#runner{
+    position: absolute;
+    left: 356px;
+    width: 446px;
+    height: auto;
+    z-index: -1;
+    top: 80px;
+}
+
+#selectedCharacterInformation {
+    position:relative;
+}
+
+#hat{
+    position:absolute;
+    left:440px;
+    top:50px;
+    width:130px;
+    height:auto;
 }
