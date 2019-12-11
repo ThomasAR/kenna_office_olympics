@@ -14,6 +14,8 @@ $(document).ready(function () {
             data = data.sort((a, b) => {
                 return b.score - a.score
             })
+
+            console.log(data);
             data.forEach(s => {
 
                 //check to make sure Sukhvir's not hacking me
