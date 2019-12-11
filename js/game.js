@@ -515,7 +515,7 @@ function drawInitialGrassBits() {
 function updateScores() {
     let reqNickname = nickname.replace(" ", "%");
     let reqCharacter = character.replace(" ", "%");
-    let request = `/UpdateScores?&nickname=${reqNickname}&character=${reqCharacter}&avatar=${avatar}&score=${(-pencilDX / 10).toFixed(1)}`
+    let request = `/UpdateScores?&nickname=${reqNickname}&character=${reqCharacter}&avatar=${avatar}&score=${(-pencilDX / 10).toFixed(1)}\u200C`
     $.ajax({
         type: 'GET',
         url: FLASK_SERVER_URL + request,

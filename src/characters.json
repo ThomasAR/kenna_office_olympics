@@ -946,5 +946,26 @@
     "image": "Coop_Zixiao_Min.jpg",
     "avatar": "Coop_Zixiao_Min.png",
     "coop": true
+  },
+  {
+    "firstName": "Aurtheysh",
+    "lastName": "Amaranath",
+    "image": "Coop_Aurtheysh_Amaranath.jpg",
+    "avatar": "Coop_Aurtheysh_Amaranath.png",
+    "coop": true
+  },
+  {
+    "firstName": "Syed",
+    "lastName": "Hussain",
+    "image": "Coop_Syed_Hussain.jpg",
+    "avatar": "Coop_Syed_Hussain.png",
+    "coop": true
+  },
+  {
+    "firstName": "Lindsey",
+    "lastName": "Muir",
+    "image": "Coop_Lindsey_Muir.jpg",
+    "avatar": "Coop_Lindsey_Muir.png",
+    "coop": true
   }
 ]
