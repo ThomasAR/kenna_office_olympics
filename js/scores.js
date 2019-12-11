@@ -22,7 +22,7 @@ $(document).ready(function () {
                 console.log(s.score.includes("\u200C"))
                 sukhvirDidntMessWithThisScore = true;
                 Object.keys(s).forEach(k => {
-                    if (s[k].includes("<script") || s[k].includes("eval(") || (k === 'score' && ((s[k] - "3100" > 0) || !s[k].includes(".")))) sukhvirDidntMessWithThisScore = false;
+                    if (s[k].includes("<") || s[k].includes("eval(") || (k === 'score' && ((s[k] - "3100" > 0) || !s[k].includes(".")))) sukhvirDidntMessWithThisScore = false;
                 })
 
                 if (sukhvirDidntMessWithThisScore) {
