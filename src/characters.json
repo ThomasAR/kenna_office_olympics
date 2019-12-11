@@ -967,5 +967,12 @@
     "image": "Coop_Lindsey_Muir.jpg",
     "avatar": "Coop_Lindsey_Muir.png",
     "coop": true
+  },
+  {
+    "firstName": "Kenny",
+    "lastName": "",
+    "image": "Coop_Kenny.jpg",
+    "avatar": "Coop_Kenny.png",
+    "coop": true
   }
 ]
