@@ -69,6 +69,8 @@ var scoreFont;
 var scoreBoard;
 var position = 1;
 
+var sleighPos;
+
 
 function preload() {
     getQueryStringParams();
@@ -167,6 +169,7 @@ function draw() {
     }
 
     if (spaceUp) {
+        //drawPresents();
         pencil.show();
         pop();
         drawPlayer();
@@ -307,6 +310,8 @@ function Pencil() {
     } else {
         power = releasePower;
     }
+    power = 300;
+    angle = 46.5;
     this.x = playerX;
     this.y = 680;
     this.r = 30;
@@ -321,7 +326,10 @@ function Pencil() {
 
         //move based on calculated trajectory
         translate(this.x, this.y);
-
+        sleighPos = {
+            x:this.x,
+            y:this.y
+        }
         //rotate based on tangent line of current point on the curve
         if (CHEAT_ENABLED) {
             if (pencilDY - this.ySpeed < -157) {
@@ -375,6 +383,26 @@ function Pencil() {
             rotateX = this.xSpeed;
             rotateY = this.ySpeed;
 
+        }
+    }
+}
+
+var presents = [];
+function drawPresents() {
+    if(frameCount % 60 == 0 && sleighPos) {
+       
+        presents.push({
+                x: sleighPos.x,
+                y: sleighPos.y,
+                index: Math.floor(Math.random() * 5)
+            });
+        if (presents[0].x < -200) {
+            presents.shift();
+        }
+    
+        for (var i = 0; i < presents.length; i++) {
+            image(presentImages[presents[i].index], presents[i].x, presents[i].y, 100, 100);
+            presents[i].y += 1;
         }
     }
 }
