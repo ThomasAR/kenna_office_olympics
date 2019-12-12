@@ -120,19 +120,6 @@ function preload() {
     houseImages.push(loadImage('../resources/houses/house_5.png'))
 
 
-    $.ajax({
-        type: 'GET',
-        url: FLASK_SERVER_URL + "/GetScores",
-        crossDomain: true,
-        success: function (res) {
-            let place = 1;
-            let data = JSON.parse(res);
-            data = data.sort((a, b) => {
-                return b.score - a.score
-            })
-            scoreBoard = data;
-        }
-    })
 
 
 }
@@ -666,43 +653,8 @@ function endGame() {
     var score = ((-pencilDX / 10).toFixed(1)).toString();
     console.log(score);
 
-    scoreBoard = scoreBoard.filter(s => {
-        let falseData = false;
-        Object.keys(s).forEach(k => {
-            if (s[k].includes("<") || s[k].includes("eval(") || (k === 'score' && ((s[k] - "3100" > 0) || !s[k].includes(".")))) falseData = true;
-        })
-        return !falseData;
-    })
-    console.log(scoreBoard);
-    for (var i = 0; i < scoreBoard.length; i++) {
-        console.log(scoreBoard[i]);
-        if (score - scoreBoard[i].score > 0) {
-            position = i + 1;
-            console.log(position);
-            break;
-        }
-    }
-    switch (position) {
-        case 1:
-            $('#MedalImg').attr('src', '../resources/medals/first.png');
-            $('#medal').css("background", "none");
-            break;
-        case 2:
-            $('#MedalImg').attr('src', '../resources/medals/second.png');
-            $('#medal').css("background", "none");
-            break;
-        case 3:
-            $('#MedalImg').attr('src', '../resources/medals/third.png');
-            $('#medal').css("background", "none");
-            break;
-        default:
-            $('#MedalImg').attr('src', '../resources/medals/third.png');
-            break;
-    }
-
+  
     $('#Score').html((-pencilDX / 10).toFixed(1) + " m");
-    $('#position').html(position);
-    $('#ordinal').html(ordinal_suffix_of(position));
     setTimeout(function () {
         $('#EndScreen').fadeIn();
     }, 1000);
