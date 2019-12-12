@@ -328,8 +328,8 @@ function Pencil() {
         //move based on calculated trajectory
         translate(this.x, this.y);
         sleighPos = {
-            x:this.x,
-            y:this.y
+            x: this.x,
+            y: this.y
         }
         //rotate based on tangent line of current point on the curve
         if (CHEAT_ENABLED) {
@@ -390,19 +390,19 @@ function Pencil() {
 
 var presents = [];
 function drawPresents() {
-    if(!spaceUp) return;
+    if (!spaceUp) return;
 
-    if(frameCount % 40 == 0 && sleighPos) {
-       
+    if (frameCount % 40 == 0 && sleighPos) {
+
         presents.push({
-                x: sleighPos.x,
-                y: sleighPos.y,
-            });
+            x: sleighPos.x,
+            y: sleighPos.y,
+        });
         if (presents[0].x < -200) {
             presents.shift();
         }
-    
-        
+
+
     }
     for (var i = 0; i < presents.length; i++) {
         image(presentImage, presents[i].x, presents[i].y, 50, 50);

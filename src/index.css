@@ -172,7 +172,7 @@ body {
 
 #runner{
     position: absolute;
-    left: 356px;
+    left: 250px;
     width: 446px;
     height: auto;
     z-index: -1;
@@ -185,8 +185,8 @@ body {
 
 #hat{
     position:absolute;
-    left:440px;
-    top:50px;
+    left:320px;
+    top:60px;
     width:130px;
     height:auto;
 }
