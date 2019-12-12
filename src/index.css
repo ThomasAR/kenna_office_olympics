@@ -115,7 +115,14 @@ body {
     width: 125px;
     margin-bottom: 301px;
     margin-top: 100px;
+    position: absolute;
+    left: 480px;
+    z-index: -1;
+    top: 115px;
+    transform: translate(0, -50%);
 }
+
+
 
 #selectedCharacterName {
     font-size: 24px;
@@ -189,4 +196,8 @@ body {
     top:50px;
     width:130px;
     height:auto;
+}
+
+.spacer{
+    height:500px;
 }
